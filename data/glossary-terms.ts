@@ -158,7 +158,7 @@ export const glossaryTerms: GlossaryTerm[] = [
     description:
       "A Oposição é um aspecto astrológico que ocorre quando dois planetas estão separados por aproximadamente 180 graus no zodíaco (com uma orbe de cerca de 8-10°). É considerado um aspecto de tensão, mas também de consciência e equilíbrio.",
     relatedTerms: ["aspectos-astrologicos", "quadratura", "polaridades-zodiacais"],
-    image: "/placeholder.svg?height=200&width=200&query=opposition aspect 180 degrees in astrology",
+    image: "/astrological-opposition.png",
     category: "aspectos",
   },
   {
@@ -168,7 +168,7 @@ export const glossaryTerms: GlossaryTerm[] = [
     description:
       "O Sextil é um aspecto astrológico que ocorre quando dois planetas estão separados por aproximadamente 60 graus no zodíaco (com uma orbe de cerca de 5-6°). É considerado um aspecto harmonioso e benéfico, embora mais sutil que o trígono.",
     relatedTerms: ["aspectos-astrologicos", "trigono", "elementos-astrologicos"],
-    image: "/placeholder.svg?height=200&width=200&query=sextile aspect 60 degrees in astrology",
+    image: "/astrological-sextile.png",
     category: "aspectos",
   },
   {
@@ -178,7 +178,7 @@ export const glossaryTerms: GlossaryTerm[] = [
     description:
       "Na astrologia, o Sol representa o núcleo da identidade, a essência do ser, a vitalidade e o propósito central na vida de uma pessoa. É o princípio da consciência individual e da autoexpressão.",
     relatedTerms: ["signo-solar", "leo", "casa-5", "vitalidade"],
-    image: "/placeholder.svg?height=200&width=200&query=sun symbol in astrology golden",
+    image: "/golden-astrology-sun.png",
     category: "planetas",
   },
   {
@@ -188,7 +188,7 @@ export const glossaryTerms: GlossaryTerm[] = [
     description:
       "Na astrologia, a Lua representa o mundo emocional e subconsciente, os instintos, hábitos, memórias e necessidades de segurança e pertencimento. Enquanto o Sol simboliza quem somos conscientemente, a Lua revela quem somos emocionalmente e por instinto.",
     relatedTerms: ["signo-lunar", "cancer", "casa-4", "fases-da-lua"],
-    image: "/placeholder.svg?height=200&width=200&query=moon symbol in astrology silver",
+    image: "/silver-moon-astrology.png",
     category: "planetas",
   },
   {
@@ -198,7 +198,7 @@ export const glossaryTerms: GlossaryTerm[] = [
     description:
       "Na astrologia, Mercúrio representa a mente racional, o intelecto, a comunicação, o aprendizado, a percepção e o processamento de informações. É o planeta associado a como pensamos, falamos, escrevemos e trocamos ideias.",
     relatedTerms: ["gemeos", "virgem", "retrogrado", "comunicacao"],
-    image: "/placeholder.svg?height=200&width=200&query=mercury symbol in astrology",
+    image: "/astrological-mercury-symbol.png",
     category: "planetas",
   },
   {
@@ -552,5 +552,555 @@ export const glossaryTerms: GlossaryTerm[] = [
     relatedTerms: ["signos-do-zodiaco", "ecliptica", "zodiaco-tropical", "zodiaco-sideral"],
     image: "/placeholder.svg?height=200&width=200&query=zodiac wheel twelve signs constellations",
     category: "fundamentos",
+  },
+  {
+    term: "Meio do Céu (MC)",
+    slug: "meio-do-ceu",
+    shortDefinition: "Ponto mais alto do mapa astral, representando carreira, reputação e propósito público.",
+    description:
+      "O Meio do Céu (Medium Coeli ou MC) é o ponto mais alto do mapa astral, representando o meridiano local no momento do nascimento. É o cúspide da Casa 10 e simboliza a carreira, reputação pública, status social, autoridade e propósito na sociedade. O signo no MC indica como a pessoa busca reconhecimento e como expressa sua autoridade no mundo. É considerado um dos quatro ângulos principais do mapa, junto com o Ascendente, Descendente e Fundo do Céu.",
+    relatedTerms: ["casa-10", "carreira", "reputacao", "angulos-do-mapa", "capricornio"],
+    image: "/celestial-career-path.png",
+    category: "angulos",
+  },
+  {
+    term: "Fundo do Céu (IC)",
+    slug: "fundo-do-ceu",
+    shortDefinition: "Ponto mais baixo do mapa astral, representando lar, raízes e base emocional.",
+    description:
+      "O Fundo do Céu (Imum Coeli ou IC) é o ponto mais baixo do mapa astral, diretamente oposto ao Meio do Céu. É o cúspide da Casa 4 e simboliza o lar, família, raízes, ancestralidade e base emocional. O signo no IC indica como a pessoa busca segurança emocional e como se conecta com suas origens. Representa também o final da vida e questões relacionadas ao passado e à vida privada. É um dos quatro ângulos principais do mapa astral.",
+    relatedTerms: ["casa-4", "lar", "familia", "angulos-do-mapa", "cancer"],
+    image: "/astrological-roots.png",
+    category: "angulos",
+  },
+  {
+    term: "Descendente",
+    slug: "descendente",
+    shortDefinition: "Ponto oeste do mapa astral, representando relacionamentos e parcerias.",
+    description:
+      "O Descendente é o ponto oeste do mapa astral, diretamente oposto ao Ascendente. É o cúspide da Casa 7 e simboliza relacionamentos, parcerias, casamento e como nos relacionamos com os outros. O signo no Descendente frequentemente indica qualidades que buscamos em parceiros ou que projetamos nos outros. Representa o 'você' em contraste com o 'eu' do Ascendente. É um dos quatro ângulos principais do mapa astral e uma área significativa para entender dinâmicas relacionais.",
+    relatedTerms: ["casa-7", "relacionamentos", "parcerias", "angulos-do-mapa", "libra"],
+    image: "/astrological-partnership-wheel.png",
+    category: "angulos",
+  },
+  {
+    term: "Regente do Mapa",
+    slug: "regente-do-mapa",
+    shortDefinition: "Planeta que rege o signo do Ascendente, tendo influência especial sobre todo o mapa.",
+    description:
+      "O Regente do Mapa é o planeta que rege o signo do Ascendente, exercendo uma influência especial sobre todo o mapa astral. Este planeta é considerado o 'governante' do mapa e sua posição por signo e casa oferece insights importantes sobre o propósito de vida e a forma como a pessoa navega sua jornada. A condição do Regente do Mapa - seus aspectos, dignidades e debilidades - afeta significativamente como a pessoa expressa sua personalidade e aborda a vida.",
+    relatedTerms: ["ascendente", "regencia-planetaria", "dignidades-essenciais", "proposito-de-vida"],
+    image: "/astrological-chart-ruler.png",
+    category: "tecnicas-interpretativas",
+  },
+  {
+    term: "Planeta Retrógrado",
+    slug: "planeta-retrogrado",
+    shortDefinition: "Movimento aparente de um planeta para trás, indicando revisão e internalização.",
+    description:
+      "Um Planeta Retrógrado é aquele que, visto da Terra, parece se mover para trás no zodíaco. Este é um fenômeno óptico causado pelas diferentes velocidades orbitais dos planetas. Na astrologia, planetas retrógrados indicam áreas de vida onde somos chamados a revisar, reconsiderar e internalizar as energias daquele planeta. Frequentemente apontam para questões kármicas, talentos não desenvolvidos de vidas passadas ou áreas onde precisamos de mais reflexão e trabalho interior antes de expressá-las externamente.",
+    relatedTerms: ["mercurio-retrogrado", "venus-retrogrado", "marte-retrogrado", "karma", "introspecção"],
+    image: "/cosmic-dance-retrograde.png",
+    category: "movimentos-planetarios",
+  },
+  {
+    term: "Domicílio Planetário",
+    slug: "domicilio-planetario",
+    shortDefinition: "Signo regido naturalmente por um planeta, onde sua energia se expressa com mais força.",
+    description:
+      "O Domicílio Planetário é o signo regido naturalmente por um planeta, onde sua energia se expressa com mais força e clareza. Quando um planeta está em seu domicílio, ele funciona de maneira ideal, expressando suas qualidades de forma harmoniosa e eficaz. Por exemplo, Marte está em domicílio em Áries, Vênus em Touro e Libra, Mercúrio em Gêmeos e Virgem, e assim por diante. Um planeta em domicílio no mapa natal indica uma área de força natural e talento inato.",
+    relatedTerms: ["regencia-planetaria", "dignidades-essenciais", "exaltacao", "detrimento", "queda"],
+    image: "/placeholder.svg?height=200&width=200&query=planetary domicile rulership astrology",
+    category: "dignidades-planetarias",
+  },
+  {
+    term: "Exaltação",
+    slug: "exaltacao",
+    shortDefinition: "Signo onde um planeta expressa suas qualidades de forma elevada e refinada.",
+    description:
+      "A Exaltação é um signo onde um planeta expressa suas qualidades de forma elevada, refinada e até mesmo idealizada, embora diferente de seu domicílio natural. Quando um planeta está em seu signo de exaltação, suas energias são amplificadas e expressas de maneira particularmente positiva. Por exemplo, o Sol é exaltado em Áries, a Lua em Touro, Júpiter em Câncer, e assim por diante. Um planeta exaltado no mapa natal indica uma área de especial talento e potencial para expressão elevada.",
+    relatedTerms: ["dignidades-essenciais", "domicilio-planetario", "detrimento", "queda", "planetas"],
+    image: "/placeholder.svg?height=200&width=200&query=planetary exaltation astrology dignity",
+    category: "dignidades-planetarias",
+  },
+  {
+    term: "Queda",
+    slug: "queda",
+    shortDefinition: "Signo onde um planeta expressa suas qualidades de forma enfraquecida ou desafiadora.",
+    description:
+      "A Queda é um signo onde um planeta expressa suas qualidades de forma enfraquecida, desafiadora ou menos eficaz. Quando um planeta está em seu signo de queda, suas energias encontram dificuldades para se manifestar de maneira harmoniosa. Por exemplo, o Sol está em queda em Libra, a Lua em Escorpião, Vênus em Virgem, e assim por diante. Um planeta em queda no mapa natal indica uma área que pode requerer mais esforço consciente para desenvolver, mas que também pode oferecer profundas lições e crescimento através dos desafios.",
+    relatedTerms: ["dignidades-essenciais", "domicilio-planetario", "exaltacao", "detrimento", "planetas"],
+    image: "/placeholder.svg?height=200&width=200&query=planetary fall astrology challenge",
+    category: "dignidades-planetarias",
+  },
+  {
+    term: "Detrimento",
+    slug: "detrimento",
+    shortDefinition: "Signo oposto ao domicílio de um planeta, onde sua energia encontra mais resistência.",
+    description:
+      "O Detrimento é o signo oposto ao domicílio natural de um planeta, onde sua energia encontra mais resistência e dificuldade para se expressar. Quando um planeta está em detrimento, suas qualidades podem se manifestar de forma exagerada, distorcida ou inibida. Por exemplo, Marte está em detrimento em Libra, Vênus em Escorpião e Áries, e assim por diante. Um planeta em detrimento no mapa natal indica uma área de desafio que, quando trabalhada conscientemente, pode levar a um desenvolvimento significativo e uma expressão mais equilibrada.",
+    relatedTerms: ["dignidades-essenciais", "domicilio-planetario", "exaltacao", "queda", "planetas"],
+    image: "/placeholder.svg?height=200&width=200&query=planetary detriment astrology challenge",
+    category: "dignidades-planetarias",
+  },
+  {
+    term: "Vertex",
+    slug: "vertex",
+    shortDefinition: "Ponto de destino e encontros significativos no mapa astral.",
+    description:
+      "O Vertex é um ponto sensível no mapa astral, calculado a partir da intersecção da eclíptica com o círculo vertical primário. É considerado um 'ponto de destino' ou 'ponto de encontros significativos', frequentemente associado a encontros fatídicos, relacionamentos kármicos e momentos de sincronicidade. Localizado geralmente na 5ª, 6ª, 7ª ou 8ª casa, o Vertex representa experiências que parecem estar fora do nosso controle consciente, mas que têm um impacto profundo em nossa jornada de vida.",
+    relatedTerms: ["antivertex", "pontos-arabicos", "destino", "sincronicidade", "karma"],
+    image: "/placeholder.svg?height=200&width=200&query=vertex astrology fate destiny",
+    category: "pontos-especiais",
+  },
+  {
+    term: "Antivertex",
+    slug: "antivertex",
+    shortDefinition: "Ponto oposto ao Vertex, representando escolhas conscientes e autodeterminação.",
+    description:
+      "O Antivertex é o ponto diretamente oposto ao Vertex no mapa astral. Enquanto o Vertex representa encontros fatídicos e experiências que parecem estar fora do nosso controle, o Antivertex simboliza escolhas conscientes, autodeterminação e áreas onde temos maior capacidade de direcionamento voluntário. Este ponto está associado a como podemos conscientemente moldar nosso destino e fazer escolhas que alinhem nossa vida com nossos valores e propósitos mais profundos.",
+    relatedTerms: ["vertex", "pontos-arabicos", "livre-arbitrio", "escolhas-conscientes", "autodeterminacao"],
+    image: "/placeholder.svg?height=200&width=200&query=antivertex astrology free will choice",
+    category: "pontos-especiais",
+  },
+  {
+    term: "Termos Egípcios",
+    slug: "termos-egipcios",
+    shortDefinition: "Divisões de cada signo em cinco partes desiguais, cada uma regida por um planeta.",
+    description:
+      "Os Termos Egípcios (ou Términos) são divisões de cada signo do zodíaco em cinco partes desiguais, cada uma regida por um dos cinco planetas visíveis (excluindo o Sol e a Lua): Mercúrio, Vênus, Marte, Júpiter e Saturno. Esta é uma das dignidades essenciais na astrologia tradicional, junto com domicílio, exaltação, triplicidade e face. A posição de um planeta em um termo específico modifica sua expressão e força. Os Termos Egípcios são particularmente utilizados na astrologia helenística e medieval para análises detalhadas de dignidades planetárias.",
+    relatedTerms: ["dignidades-essenciais", "faces", "triplicidades", "astrologia-tradicional", "planetas"],
+    image: "/placeholder.svg?height=200&width=200&query=egyptian terms astrology dignity",
+    category: "dignidades-planetarias",
+  },
+  {
+    term: "Faces (Decanatos)",
+    slug: "faces-decanatos",
+    shortDefinition: "Divisões de cada signo em três partes iguais de 10 graus, cada uma com um regente planetário.",
+    description:
+      "As Faces, também conhecidas como Decanatos, são divisões de cada signo do zodíaco em três partes iguais de 10 graus cada, totalizando 36 faces no zodíaco completo. Cada face tem um regente planetário que modifica a expressão do signo naqueles graus específicos. Na astrologia tradicional, as faces seguem a ordem caldeia dos planetas: Saturno, Júpiter, Marte, Sol, Vênus, Mercúrio e Lua. Esta é uma das dignidades essenciais menores e oferece nuances adicionais na interpretação de um mapa astral, especialmente em análises mais detalhadas.",
+    relatedTerms: ["decanatos", "dignidades-essenciais", "termos-egipcios", "astrologia-tradicional", "planetas"],
+    image: "/placeholder.svg?height=200&width=200&query=decans faces astrology divisions",
+    category: "dignidades-planetarias",
+  },
+  {
+    term: "Sistema Placidus",
+    slug: "sistema-placidus",
+    shortDefinition: "Sistema de casas mais popular no Ocidente, baseado em divisões de tempo.",
+    description:
+      "O Sistema Placidus é o sistema de casas astrológicas mais utilizado no Ocidente, desenvolvido pelo monge italiano Placidus de Titis no século XVII. Baseia-se em divisões de tempo, calculando as casas através do movimento diurno dos planetas do horizonte leste ao Meio do Céu. Este sistema cria casas de tamanhos desiguais e pode apresentar problemas em latitudes extremas (próximas aos polos), onde algumas casas podem se tornar muito pequenas ou até mesmo desaparecer. O Placidus é particularmente valorizado por sua correlação com o movimento aparente do Sol ao longo do dia.",
+    relatedTerms: ["casas-astrologicas", "sistemas-de-casas", "meio-do-ceu", "ascendente", "mapa-natal"],
+    image: "/placeholder.svg?height=200&width=200&query=placidus house system astrology",
+    category: "sistemas-de-casas",
+  },
+  {
+    term: "Sistema Koch",
+    slug: "sistema-koch",
+    shortDefinition: "Sistema de casas baseado no nascimento simbólico do indivíduo ao longo do dia.",
+    description:
+      "O Sistema Koch, também conhecido como Sistema de Casas do Nascimento, foi desenvolvido pelo astrólogo alemão Walter Koch no século XX. Este sistema baseia-se no conceito de 'nascimento simbólico', calculando as casas através de um método que divide o tempo que um ponto leva para se mover do horizonte leste ao Meio do Céu. O Koch é semelhante ao Placidus em alguns aspectos, mas produz cúspides de casas ligeiramente diferentes. É particularmente popular na Alemanha e em partes da Europa, sendo valorizado por alguns astrólogos por sua precisão em questões relacionadas ao tempo e eventos.",
+    relatedTerms: ["casas-astrologicas", "sistemas-de-casas", "sistema-placidus", "meio-do-ceu", "ascendente"],
+    image: "/placeholder.svg?height=200&width=200&query=koch house system astrology",
+    category: "sistemas-de-casas",
+  },
+  {
+    term: "Sistema Whole Sign",
+    slug: "sistema-whole-sign",
+    shortDefinition: "Sistema de casas mais antigo, onde cada signo completo constitui uma casa.",
+    description:
+      "O Sistema Whole Sign (Signo Inteiro) é o sistema de casas mais antigo conhecido na astrologia ocidental, utilizado na astrologia helenística e ainda popular hoje. Neste sistema, cada casa corresponde exatamente a um signo completo do zodíaco, começando pelo signo que contém o Ascendente, que se torna a primeira casa. É um sistema simples e direto, onde as cúspides das casas coincidem com o início de cada signo (0°). O Whole Sign tem ganhado popularidade renovada nos últimos anos devido à sua simplicidade, clareza e eficácia demonstrada em estudos de casos históricos e contemporâneos.",
+    relatedTerms: [
+      "casas-astrologicas",
+      "sistemas-de-casas",
+      "signos-do-zodiaco",
+      "astrologia-helenistica",
+      "ascendente",
+    ],
+    image: "/placeholder.svg?height=200&width=200&query=whole sign house system astrology",
+    category: "sistemas-de-casas",
+  },
+  {
+    term: "Sistema Porfírio",
+    slug: "sistema-porfirio",
+    shortDefinition: "Sistema de casas que divide o espaço entre ângulos em três partes iguais.",
+    description:
+      "O Sistema Porfírio é um dos sistemas de casas astrológicas mais antigos, atribuído ao filósofo neoplatônico Porfírio do século III. Este sistema divide o espaço entre os quatro ângulos principais (Ascendente, Meio do Céu, Descendente e Fundo do Céu) em três partes iguais para criar as doze casas. É um sistema relativamente simples que pode ser calculado manualmente e funciona em todas as latitudes. O Porfírio foi amplamente utilizado na astrologia medieval e é ainda apreciado por sua abordagem direta e geométrica para a divisão das casas.",
+    relatedTerms: [
+      "casas-astrologicas",
+      "sistemas-de-casas",
+      "angulos-do-mapa",
+      "astrologia-medieval",
+      "geometria-astral",
+    ],
+    image: "/placeholder.svg?height=200&width=200&query=porphyry house system astrology",
+    category: "sistemas-de-casas",
+  },
+  {
+    term: "Sistema Campanus",
+    slug: "sistema-campanus",
+    shortDefinition: "Sistema de casas baseado em divisões iguais do círculo vertical primário.",
+    description:
+      "O Sistema Campanus é um sistema de casas astrológicas desenvolvido pelo matemático italiano Giovanni Campano no século XIII. Este sistema baseia-se na divisão do círculo vertical primário (que passa pelos polos leste e oeste e pelo zênite e nadir) em doze partes iguais. As casas são então formadas pelos grandes círculos que passam pelos polos norte e sul e pelos pontos de divisão no círculo vertical. O Campanus é considerado um sistema altamente matemático e geométrico, apreciado por sua elegância e precisão espacial, embora seja menos comum na prática astrológica contemporânea.",
+    relatedTerms: [
+      "casas-astrologicas",
+      "sistemas-de-casas",
+      "geometria-astral",
+      "astrologia-medieval",
+      "matematica-astrologica",
+    ],
+    image: "/placeholder.svg?height=200&width=200&query=campanus house system astrology",
+    category: "sistemas-de-casas",
+  },
+  {
+    term: "Astrologia Eletiva",
+    slug: "astrologia-eletiva",
+    shortDefinition: "Técnica para escolher o momento mais favorável para iniciar um empreendimento.",
+    description:
+      "A Astrologia Eletiva é a técnica de escolher o momento mais favorável para iniciar um empreendimento ou atividade, baseando-se nas configurações astrológicas. Diferente da Astrologia Horária, que responde a perguntas específicas, a Eletiva busca criar intencionalmente um 'mapa de nascimento' para um projeto, casamento, viagem, cirurgia, assinatura de contrato ou qualquer iniciativa importante. O astrólogo analisa os trânsitos planetários, fases lunares, aspectos e posições das casas para determinar o momento que oferece as melhores energias para o sucesso do empreendimento em questão.",
+    relatedTerms: ["astrologia-horaria", "eleicao-astrologica", "timing", "iniciativas", "fases-lunares"],
+    image: "/placeholder.svg?height=200&width=200&query=electional astrology timing success",
+    category: "tecnicas-astrologicas",
+  },
+  {
+    term: "Astrologia Médica",
+    slug: "astrologia-medica",
+    shortDefinition: "Estudo das correspondências entre astrologia e saúde física e mental.",
+    description:
+      "A Astrologia Médica é o estudo das correspondências entre os corpos celestes e a saúde física e mental. Esta antiga tradição associa planetas, signos e casas a diferentes partes do corpo, sistemas fisiológicos e potenciais predisposições a determinadas condições. Por exemplo, Áries governa a cabeça, Touro a garganta, Leão o coração, etc. Na astrologia tradicional, era uma ferramenta importante para diagnóstico e tratamento, embora hoje seja geralmente utilizada como complemento à medicina convencional, oferecendo insights sobre tendências constitucionais, ciclos de saúde e abordagens holísticas para o bem-estar.",
+    relatedTerms: ["saude", "corpo-humano", "planetas", "signos-do-zodiaco", "medicina-holistica"],
+    image: "/placeholder.svg?height=200&width=200&query=medical astrology health body",
+    category: "ramos-astrologicos",
+  },
+  {
+    term: "Astrologia Cármica",
+    slug: "astrologia-carmica",
+    shortDefinition: "Estudo das influências de vidas passadas e lições da alma no mapa astral.",
+    description:
+      "A Astrologia Cármica é uma abordagem que estuda o mapa astral como um reflexo de experiências de vidas passadas e lições que a alma precisa aprender nesta encarnação. Foca-se particularmente nos Nodos Lunares, Saturno, Quíron, planetas retrógrados e a Casa 12, que são considerados indicadores de karma e padrões repetitivos. Esta vertente da astrologia busca identificar talentos trazidos de outras vidas, desafios kármicos a serem superados e o propósito evolutivo da alma. A Astrologia Cármica oferece uma perspectiva espiritual e transformadora, ajudando a pessoa a compreender e transcender padrões limitantes.",
+    relatedTerms: ["nodo-norte", "nodo-sul", "saturno", "quiron", "reencarnacao", "evolucao-espiritual"],
+    image: "/placeholder.svg?height=200&width=200&query=karmic astrology soul lessons past lives",
+    category: "ramos-astrologicos",
+  },
+  {
+    term: "Astrologia Psicológica",
+    slug: "astrologia-psicologica",
+    shortDefinition: "Abordagem que integra astrologia e psicologia para autoconhecimento e desenvolvimento pessoal.",
+    description:
+      "A Astrologia Psicológica é uma abordagem moderna que integra princípios astrológicos com conceitos da psicologia, particularmente a psicologia junguiana, para promover autoconhecimento e desenvolvimento pessoal. Desenvolvida principalmente por astrólogos como Dane Rudhyar e Liz Greene, esta vertente vê o mapa astral como um retrato da psique, onde planetas representam diferentes funções psicológicas e aspectos simbolizam dinâmicas internas. Diferente da astrologia tradicional focada em previsões, a Astrologia Psicológica enfatiza o potencial de crescimento, integração da sombra e individuação, utilizando o mapa como uma ferramenta para compreender motivações inconscientes e facilitar a transformação pessoal.",
+    relatedTerms: [
+      "psicologia-junguiana",
+      "autoconhecimento",
+      "sombra",
+      "inconsciente",
+      "individuacao",
+      "desenvolvimento-pessoal",
+    ],
+    image: "/placeholder.svg?height=200&width=200&query=psychological astrology self knowledge jung",
+    category: "ramos-astrologicos",
+  },
+  {
+    term: "Astrologia Esotérica",
+    slug: "astrologia-esoterica",
+    shortDefinition: "Abordagem espiritual da astrologia focada na evolução da alma e propósito cósmico.",
+    description:
+      "A Astrologia Esotérica, também conhecida como Astrologia da Alma, é uma abordagem espiritual desenvolvida principalmente por Alice Bailey e baseada nos ensinamentos de Djwhal Khul. Esta vertente foca na evolução da alma e no propósito cósmico, indo além da personalidade para explorar dimensões mais profundas do ser. Utiliza regências planetárias esotéricas (diferentes das tradicionais), raios de energia e triângulos de força para compreender o caminho evolutivo da alma. A Astrologia Esotérica trabalha com três níveis de interpretação: personalidade (exotérica), alma (esotérica) e espírito (hierárquica), oferecendo uma visão multidimensional do propósito encarnacional.",
+    relatedTerms: ["alice-bailey", "raios", "regencias-esotericas", "evolucao-espiritual", "proposito-da-alma"],
+    image: "/placeholder.svg?height=200&width=200&query=esoteric astrology soul purpose rays",
+    category: "ramos-astrologicos",
+  },
+  {
+    term: "Astrologia de Relocação",
+    slug: "astrologia-de-relocacao",
+    shortDefinition: "Estudo de como o mapa astral se modifica quando a pessoa se muda para outro local.",
+    description:
+      "A Astrologia de Relocação, também conhecida como Astrologia Astrocartográfica, estuda como o mapa astral se modifica quando a pessoa se muda para outro local geográfico. Esta técnica recalcula as posições das casas e ângulos do mapa natal como se a pessoa tivesse nascido no novo local, mantendo as mesmas posições planetárias por signo e aspectos. A Relocação permite identificar lugares onde determinadas energias planetárias são amplificadas, ajudando a escolher locais favoráveis para diferentes objetivos como carreira, relacionamentos, criatividade ou crescimento espiritual. É uma ferramenta valiosa para quem considera mudanças de residência ou viagens prolongadas.",
+    relatedTerms: [
+      "astrocartografia",
+      "linhas-planetarias",
+      "mudanca-geografica",
+      "angulos-do-mapa",
+      "casas-astrologicas",
+    ],
+    image: "/placeholder.svg?height=200&width=200&query=relocation astrology astrocartography travel",
+    category: "tecnicas-astrologicas",
+  },
+  {
+    term: "Lua Fora de Curso",
+    slug: "lua-fora-de-curso",
+    shortDefinition: "Período em que a Lua não forma mais aspectos maiores antes de mudar de signo.",
+    description:
+      "A Lua Fora de Curso (Moon Void of Course) é um fenômeno astrológico que ocorre quando a Lua não formará mais nenhum aspecto maior (conjunção, sextil, quadratura, trígono ou oposição) com outros planetas antes de mudar de signo. Durante este período, que pode durar de minutos a dias, as atividades tendem a não se desenvolver como planejado, há mais confusão, desvios e resultados inesperados. Tradicionalmente, é considerado um momento desfavorável para iniciar novos projetos, tomar decisões importantes ou fazer compras significativas. No entanto, é ideal para atividades contemplativas, finalização de tarefas, meditação e descanso.",
+    relatedTerms: ["lua", "aspectos-astrologicos", "timing", "astrologia-horaria", "astrologia-eletiva"],
+    image: "/placeholder.svg?height=200&width=200&query=void of course moon astrology timing",
+    category: "fenomenos-astrologicos",
+  },
+  {
+    term: "Estrela Fixa",
+    slug: "estrela-fixa",
+    shortDefinition:
+      "Estrelas além do nosso sistema solar que influenciam o mapa astral quando alinhadas com planetas.",
+    description:
+      "As Estrelas Fixas são estrelas além do nosso sistema solar que, na astrologia tradicional, exercem influências específicas quando alinhadas com planetas ou pontos sensíveis no mapa astral. Diferente dos planetas que se movem constantemente pelo zodíaco, as estrelas fixas parecem relativamente imóveis (embora na realidade se movam muito lentamente). Algumas das mais importantes incluem Aldebaran, Regulus, Antares e Fomalhaut (as quatro estrelas reais), Sirius, Spica, Algol e Alcyone (das Plêiades). Cada estrela fixa possui qualidades específicas e pode amplificar ou modificar a expressão de um planeta quando em conjunção. Na astrologia tradicional, as estrelas fixas eram consideradas poderosas influências, especialmente quando conjuntas a luminares ou ângulos do mapa.",
+    relatedTerms: ["constelacoes", "planetas", "conjuncao", "astrologia-tradicional", "influencias-celestes"],
+    image: "/placeholder.svg?height=200&width=200&query=fixed stars astrology constellations",
+    category: "corpos-celestes",
+  },
+  {
+    term: "Eclipses",
+    slug: "eclipses",
+    shortDefinition:
+      "Fenômenos celestes que ocorrem quando Sol, Lua e Terra se alinham, gerando períodos de transformação.",
+    description:
+      "Os Eclipses são fenômenos celestes que ocorrem quando Sol, Lua e Terra se alinham. No Eclipse Solar, a Lua nova bloqueia a luz do Sol; no Eclipse Lunar, a Lua cheia passa pela sombra da Terra. Astrologicamente, os eclipses são considerados portais poderosos de transformação e mudança acelerada. Ocorrem próximos aos Nodos Lunares e seus efeitos podem ser sentidos semanas antes e meses depois. Quando um eclipse ativa pontos sensíveis no mapa natal (formando conjunção ou oposição com planetas ou ângulos), pode desencadear eventos significativos relacionados à casa e ao planeta afetados, frequentemente trazendo revelações, finalizações e novos começos.",
+    relatedTerms: ["eclipse-solar", "eclipse-lunar", "nodos-lunares", "transformacao", "ciclos-lunares"],
+    image: "/placeholder.svg?height=200&width=200&query=eclipse astrology transformation portal",
+    category: "fenomenos-astrologicos",
+  },
+  {
+    term: "Progressão Secundária",
+    slug: "progressao-secundaria",
+    shortDefinition: "Técnica preditiva onde cada dia após o nascimento equivale a um ano de vida.",
+    description:
+      "A Progressão Secundária é uma técnica preditiva onde cada dia após o nascimento equivale a um ano de vida da pessoa. Por exemplo, o mapa progressado para os 30 anos seria calculado usando a posição dos planetas 30 dias após o nascimento. Esta técnica mostra a evolução interna e o desenvolvimento psicológico ao longo da vida. As progressões são particularmente úteis para observar mudanças de signo dos planetas pessoais (especialmente Mercúrio, Vênus e Marte) e as fases progressadas da Lua, que ocorrem aproximadamente a cada 27-28 anos. As progressões complementam os trânsitos, mostrando o desenvolvimento interno enquanto os trânsitos indicam eventos externos.",
+    relatedTerms: [
+      "progressoes",
+      "previsao-astrologica",
+      "desenvolvimento-interno",
+      "evolucao-pessoal",
+      "ciclos-de-vida",
+    ],
+    image: "/placeholder.svg?height=200&width=200&query=secondary progressions astrology evolution",
+    category: "tecnicas-astrologicas",
+  },
+  {
+    term: "Direção Primária",
+    slug: "direcao-primaria",
+    shortDefinition: "Técnica preditiva antiga baseada na rotação da Terra, onde cada grau equivale a um ano de vida.",
+    description:
+      "A Direção Primária é uma das técnicas preditivas mais antigas da astrologia, baseada na rotação da Terra em torno de seu eixo. Neste método, o movimento dos planetas e pontos do mapa natal é projetado ao longo da eclíptica, onde cada grau de movimento equivale aproximadamente a um ano de vida. As Direções Primárias eram amplamente utilizadas na astrologia tradicional e medieval, sendo consideradas particularmente eficazes para prever eventos significativos e momentos de mudança. Embora seja uma técnica complexa que requer cálculos elaborados, muitos astrólogos tradicionais ainda a consideram uma das ferramentas preditivas mais precisas e poderosas.",
+    relatedTerms: ["previsao-astrologica", "progressoes", "transitos", "astrologia-tradicional", "ciclos-de-vida"],
+    image: "/placeholder.svg?height=200&width=200&query=primary directions astrology prediction",
+    category: "tecnicas-astrologicas",
+  },
+  {
+    term: "Retorno Lunar",
+    slug: "retorno-lunar",
+    shortDefinition: "Mapa calculado para o momento em que a Lua retorna à sua posição natal, a cada 27-28 dias.",
+    description:
+      "O Retorno Lunar é um mapa astrológico calculado para o momento exato em que a Lua retorna à mesma posição (grau e signo) que ocupava no nascimento, o que ocorre aproximadamente a cada 27-28 dias. Este mapa oferece insights sobre as tendências emocionais, experiências e eventos do mês lunar que se inicia. É uma técnica preditiva de curto prazo, particularmente útil para acompanhar ciclos emocionais, relações familiares e questões domésticas. O Retorno Lunar pode ser calculado para o local de nascimento ou para o local atual de residência, com este último refletindo mais precisamente as circunstâncias presentes.",
+    relatedTerms: ["lua", "ciclos-lunares", "previsao-astrologica", "emocoes", "ciclos-mensais"],
+    image: "/placeholder.svg?height=200&width=200&query=lunar return monthly prediction astrology",
+    category: "tecnicas-astrologicas",
+  },
+  {
+    term: "Asteroides",
+    slug: "asteroides",
+    shortDefinition: "Corpos celestes menores que oferecem nuances adicionais na interpretação astrológica.",
+    description:
+      "Os Asteroides são corpos celestes menores que orbitam o Sol, principalmente na faixa entre Marte e Júpiter. Na astrologia moderna, vários asteroides são incorporados à interpretação para oferecer nuances adicionais. Os mais utilizados são os quatro asteroides principais: Ceres (nutrição, maternidade), Palas (sabedoria, criatividade intelectual), Juno (parcerias, compromisso) e Vesta (devoção, foco). Outros asteroides populares incluem Quíron (ferida interior, cura), Eros (paixão erótica), Psique (alma), Lilith (feminino selvagem) e asteroides com nomes de figuras mitológicas ou históricas. Eles enriquecem a interpretação do mapa, oferecendo insights sobre áreas específicas da vida.",
+    relatedTerms: ["ceres", "palas", "juno", "vesta", "quiron", "corpos-celestes"],
+    image: "/placeholder.svg?height=200&width=200&query=asteroids astrology ceres pallas juno vesta",
+    category: "corpos-celestes",
+  },
+  {
+    term: "Previsão Astrológica",
+    slug: "previsao-astrologica",
+    shortDefinition: "Estudo dos ciclos planetários para antecipar tendências e períodos significativos.",
+    description:
+      "A Previsão Astrológica é o estudo dos ciclos planetários e sua interação com o mapa natal para antecipar tendências, oportunidades, desafios e períodos significativos na vida de uma pessoa. Utiliza diversas técnicas como trânsitos (movimento atual dos planetas), progressões (evolução interna), direções, retornos solares e lunares, eclipses e ciclos planetários. Diferente da adivinhação, a previsão astrológica trabalha com probabilidades e tendências, reconhecendo o papel do livre-arbítrio nas escolhas individuais. Seu objetivo é oferecer consciência sobre os ciclos temporais, permitindo que a pessoa navegue os períodos com maior compreensão e faça escolhas mais alinhadas com os fluxos cósmicos.",
+    relatedTerms: ["transitos", "progressoes", "revolucao-solar", "eclipses", "ciclos-planetarios", "timing"],
+    image: "/placeholder.svg?height=200&width=200&query=astrological prediction forecasting cycles",
+    category: "tecnicas-astrologicas",
+  },
+  {
+    term: "Interpretação Natal",
+    slug: "interpretacao-natal",
+    shortDefinition: "Análise do mapa astral de nascimento para compreender personalidade, potenciais e desafios.",
+    description:
+      "A Interpretação Natal é a análise detalhada do mapa astral calculado para o momento exato do nascimento, visando compreender a personalidade, potenciais, desafios e tendências de vida da pessoa. Envolve o estudo das posições planetárias por signo e casa, aspectos entre planetas, configurações especiais, elementos, modalidades e outros fatores. Uma interpretação completa considera a integração de todos estes elementos, buscando uma visão holística que respeite a complexidade do indivíduo. Dependendo da abordagem do astrólogo, pode enfatizar previsões, psicologia, espiritualidade ou desenvolvimento pessoal, oferecendo insights sobre diversos aspectos como vocação, relacionamentos, talentos, desafios e propósito de vida.",
+    relatedTerms: ["mapa-natal", "personalidade", "potenciais", "desafios", "proposito-de-vida", "autoconhecimento"],
+    image: "/placeholder.svg?height=200&width=200&query=natal chart interpretation birth astrology",
+    category: "tecnicas-interpretativas",
+  },
+  {
+    term: "Almutem",
+    slug: "almutem",
+    shortDefinition: "Planeta com maior dignidade essencial e acidental em um ponto específico do mapa.",
+    description:
+      "O Almutem é o planeta que possui a maior soma de dignidades essenciais (domicílio, exaltação, triplicidade, termo e face) e acidentais (casa, aspectos, etc.) em um ponto específico do mapa astral. Na astrologia tradicional, o Almutem Figuris é o planeta com maior dignidade em todos os cinco pontos hylegiais (Sol, Lua, Ascendente, Parte da Fortuna e Lua Nova/Cheia pré-natal), sendo considerado o regente geral do mapa. O conceito de Almutem é utilizado para determinar qual planeta tem a maior influência sobre determinada área da vida ou sobre o mapa como um todo, oferecendo insights importantes sobre o destino e as tendências predominantes.",
+    relatedTerms: [
+      "dignidades-essenciais",
+      "dignidades-acidentais",
+      "regente-do-mapa",
+      "astrologia-tradicional",
+      "pontos-hylegiais",
+    ],
+    image: "/placeholder.svg?height=200&width=200&query=almutem traditional astrology dignity",
+    category: "tecnicas-interpretativas",
+  },
+  {
+    term: "Parte do Espírito",
+    slug: "parte-do-espirito",
+    shortDefinition: "Ponto calculado a partir do Ascendente, Sol e Lua, indicando propósito espiritual e vocação.",
+    description:
+      "A Parte do Espírito, também conhecida como Parte do Sol, é um ponto arábico calculado a partir das posições do Ascendente, Sol e Lua. Sua fórmula é: Ascendente + Sol - Lua (para mapas diurnos) ou Ascendente + Lua - Sol (para mapas noturnos). Enquanto a Parte da Fortuna representa felicidade material e bem-estar físico, a Parte do Espírito indica propósito espiritual, vocação e realização da alma. Este ponto mostra onde e como podemos encontrar significado profundo, expressão criativa e conexão com nosso propósito maior. Na astrologia tradicional, era considerada especialmente importante para questões relacionadas à carreira, reputação e contribuição para o mundo.",
+    relatedTerms: ["parte-da-fortuna", "pontos-arabicos", "proposito-espiritual", "vocacao", "realizacao-da-alma"],
+    image: "/placeholder.svg?height=200&width=200&query=part of spirit pars solis astrology purpose",
+    category: "pontos-especiais",
+  },
+  {
+    term: "Fortuna Diurna",
+    slug: "fortuna-diurna",
+    shortDefinition: "Cálculo da Parte da Fortuna para mapas de nascimento durante o dia (Sol acima do horizonte).",
+    description:
+      "A Fortuna Diurna refere-se ao cálculo da Parte da Fortuna para mapas de nascimento diurnos, ou seja, quando o Sol está acima do horizonte (casas 7 a 12). Neste caso, a fórmula utilizada é: Ascendente + Lua - Sol. Este ponto indica áreas de fluxo natural, felicidade, prosperidade e bem-estar físico. Na astrologia tradicional, a distinção entre cálculos diurnos e noturnos (sect) era considerada fundamental para a correta interpretação de vários elementos do mapa, incluindo as partes arábicas. A Parte da Fortuna diurna mostra onde encontramos facilidade e abundância através da expressão emocional (Lua) em harmonia com nossa identidade consciente (Sol).",
+    relatedTerms: ["parte-da-fortuna", "fortuna-noturna", "sect", "pontos-arabicos", "prosperidade"],
+    image: "/placeholder.svg?height=200&width=200&query=diurnal fortune part of fortune day chart",
+    category: "pontos-especiais",
+  },
+  {
+    term: "Fortuna Noturna",
+    slug: "fortuna-noturna",
+    shortDefinition: "Cálculo da Parte da Fortuna para mapas de nascimento durante a noite (Sol abaixo do horizonte).",
+    description:
+      "A Fortuna Noturna refere-se ao cálculo da Parte da Fortuna para mapas de nascimento noturnos, ou seja, quando o Sol está abaixo do horizonte (casas 1 a 6). Neste caso, a fórmula utilizada é: Ascendente + Sol - Lua. Este ponto indica áreas de fluxo natural, felicidade, prosperidade e bem-estar físico. Na astrologia tradicional, a distinção entre cálculos noturnos e diurnos (sect) era considerada essencial para a correta interpretação. A Parte da Fortuna noturna mostra onde encontramos facilidade e abundância através da expressão de nossa identidade consciente (Sol) em harmonia com nossas necessidades emocionais (Lua).",
+    relatedTerms: ["parte-da-fortuna", "fortuna-diurna", "sect", "pontos-arabicos", "prosperidade"],
+    image: "/placeholder.svg?height=200&width=200&query=nocturnal fortune part of fortune night chart",
+    category: "pontos-especiais",
+  },
+  {
+    term: "Hora Planetária",
+    slug: "hora-planetaria",
+    shortDefinition: "Divisão do dia e da noite em 12 partes iguais, cada uma regida por um planeta.",
+    description:
+      "A Hora Planetária é um sistema tradicional que divide o período entre o nascer e o pôr do sol (dia) e entre o pôr do sol e o nascer do sol (noite) em 12 partes iguais cada, resultando em 24 horas planetárias de duração variável ao longo do ano. Cada hora é regida por um dos sete planetas tradicionais (Sol, Lua, Mercúrio, Vênus, Marte, Júpiter e Saturno) seguindo a ordem caldeia. O regente da primeira hora do dia determina o regente do dia da semana. As horas planetárias são utilizadas na astrologia horária, magia ritual, eleições astrológicas e para escolher momentos propícios para atividades específicas alinhadas com a energia do planeta regente.",
+    relatedTerms: ["planetas", "dias-da-semana", "astrologia-horaria", "astrologia-eletiva", "magia-ritual"],
+    image: "/placeholder.svg?height=200&width=200&query=planetary hours traditional astrology timing",
+    category: "tecnicas-astrologicas",
+  },
+  {
+    term: "Senhor do Tempo",
+    slug: "senhor-do-tempo",
+    shortDefinition: "Planeta que rege um período específico da vida segundo técnicas preditivas tradicionais.",
+    description:
+      "O Senhor do Tempo (Time Lord) é um conceito da astrologia helenística e medieval que se refere ao planeta que rege um período específico da vida segundo técnicas preditivas tradicionais como Firdaria, Profecções e Cronócrator. Estes sistemas dividem a vida em períodos governados por diferentes planetas, que se tornam temporariamente mais influentes. Por exemplo, nas Profecções anuais, a cada ano um signo diferente (e seu regente) se torna o 'Senhor do Ano'. O planeta que atua como Senhor do Tempo ativa as áreas do mapa natal relacionadas a ele e seus trânsitos ganham especial importância durante seu período de regência.",
+    relatedTerms: ["firdaria", "profeccoes", "cronocrator", "previsao-astrologica", "astrologia-tradicional"],
+    image: "/placeholder.svg?height=200&width=200&query=time lord chronocrator traditional astrology",
+    category: "tecnicas-astrologicas",
+  },
+  {
+    term: "Anaretas",
+    slug: "anaretas",
+    shortDefinition: "Planeta ou ponto que indica potencial de perigo ou dano significativo no mapa astral.",
+    description:
+      "Anaretas é um termo da astrologia tradicional que se refere a um planeta ou ponto que indica potencial de perigo ou dano significativo no mapa astral. Originalmente associado à previsão de longevidade e causas de morte, o conceito tem sido reinterpretado na astrologia moderna para indicar áreas de desafio extremo ou transformação profunda. Um planeta pode se tornar anareta quando está mal posicionado (em detrimento ou queda), aflito por aspectos desafiadores, ou quando ocupa casas consideradas perigosas (6, 8 ou 12). O estudo dos anaretas era parte importante da astrologia médica e preditiva tradicional, embora hoje seja abordado com uma perspectiva mais psicológica e metafórica.",
+    relatedTerms: ["hyleg", "alcocoden", "astrologia-medica", "casas-cadentes", "transformacao-profunda"],
+    image: "/placeholder.svg?height=200&width=200&query=anareta traditional astrology challenge",
+    category: "tecnicas-interpretativas",
+  },
+  {
+    term: "Trânsitos Lentos",
+    slug: "transitos-lentos",
+    shortDefinition: "Movimento dos planetas exteriores (Júpiter a Plutão) e seu impacto em períodos longos.",
+    description:
+      "Os Trânsitos Lentos referem-se ao movimento dos planetas exteriores (Júpiter, Saturno, Urano, Netuno e Plutão) pelo zodíaco e seu impacto quando formam aspectos com pontos do mapa natal. Por terem órbitas mais longas, estes planetas permanecem em um signo por períodos extensos: Júpiter cerca de 1 ano, Saturno 2-3 anos, Urano 7 anos, Netuno 14 anos e Plutão até 30 anos em um único signo. Seus trânsitos marcam fases importantes de desenvolvimento, transformação e reestruturação, frequentemente associados a eventos significativos e mudanças profundas. Os trânsitos lentos tendem a corresponder a processos de longo prazo e são especialmente impactantes quando formam aspectos com planetas pessoais ou ângulos do mapa natal.",
+    relatedTerms: ["transitos", "planetas-exteriores", "ciclos-planetarios", "previsao-astrologica", "transformacao"],
+    image: "/placeholder.svg?height=200&width=200&query=slow transits outer planets astrology",
+    category: "transitos",
+  },
+  {
+    term: "Trânsitos Rápidos",
+    slug: "transitos-rapidos",
+    shortDefinition: "Movimento dos planetas interiores (Sol a Marte) e seu impacto em períodos curtos.",
+    description:
+      "Os Trânsitos Rápidos referem-se ao movimento dos planetas interiores (Sol, Lua, Mercúrio, Vênus e Marte) pelo zodíaco e seu impacto quando formam aspectos com pontos do mapa natal. Por terem órbitas mais curtas, estes planetas se movem rapidamente pelos signos: a Lua percorre todo o zodíaco em aproximadamente 28 dias, Mercúrio e Vênus em alguns meses, o Sol em um ano e Marte em cerca de 2 anos. Seus trânsitos tendem a corresponder a eventos cotidianos, humores passageiros e situações de curta duração. Embora geralmente menos impactantes que os trânsitos lentos, os trânsitos rápidos podem desencadear eventos significativos quando ativam configurações importantes do mapa natal ou coincidem com trânsitos lentos.",
+    relatedTerms: [
+      "transitos",
+      "planetas-interiores",
+      "ciclos-planetarios",
+      "previsao-astrologica",
+      "eventos-cotidianos",
+    ],
+    image: "/placeholder.svg?height=200&width=200&query=fast transits inner planets astrology",
+    category: "transitos",
+  },
+  {
+    term: "Ascendente Retrógrado",
+    slug: "ascendente-retrogrado",
+    shortDefinition: "Conceito errôneo, pois o Ascendente é um ponto matemático que não pode ser retrógrado.",
+    description:
+      "O termo 'Ascendente Retrógrado' é um conceito errôneo na astrologia, pois o Ascendente é um ponto matemático calculado a partir da rotação da Terra, não um corpo celeste que possa ter movimento retrógrado. O Ascendente representa o signo que estava nascendo no horizonte leste no momento do nascimento e sempre se move em uma direção constante devido à rotação da Terra. A confusão pode surgir quando o regente do Ascendente (o planeta que governa o signo ascendente) está retrógrado, o que é uma configuração válida e significativa. Neste caso, a expressão da personalidade e abordagem da vida pode ser mais interiorizada, reflexiva ou não-convencional.",
+    relatedTerms: ["ascendente", "planeta-retrogrado", "regente-do-mapa", "conceitos-erroneos", "rotacao-terrestre"],
+    image: "/placeholder.svg?height=200&width=200&query=ascendant misconception astrology",
+    category: "conceitos-astrologicos",
+  },
+  {
+    term: "Astrologia Infantil",
+    slug: "astrologia-infantil",
+    shortDefinition:
+      "Estudo do mapa astral de crianças para compreender temperamento, talentos e necessidades específicas.",
+    description:
+      "A Astrologia Infantil é o estudo do mapa astral de bebês e crianças para compreender seu temperamento inato, talentos, desafios e necessidades específicas. Esta abordagem especializada ajuda pais, educadores e cuidadores a entender melhor a criança como indivíduo único, respeitando sua natureza essencial. A interpretação enfatiza potenciais a serem nutridos, desafios a serem apoiados com sensibilidade e estratégias educacionais alinhadas com o temperamento da criança. Diferente da astrologia para adultos, a infantil considera o estágio de desenvolvimento, reconhecendo que muitos aspectos do mapa ainda estão em processo de manifestação e que o ambiente e a educação têm papel fundamental na expressão do potencial natal.",
+    relatedTerms: [
+      "temperamento",
+      "desenvolvimento-infantil",
+      "educacao",
+      "talentos-inatos",
+      "necessidades-emocionais",
+    ],
+    image: "/placeholder.svg?height=200&width=200&query=child astrology development talents",
+    category: "ramos-astrologicos",
+  },
+  {
+    term: "Astrologia Empresarial",
+    slug: "astrologia-empresarial",
+    shortDefinition: "Aplicação da astrologia para timing de negócios, análise de empresas e tendências de mercado.",
+    description:
+      "A Astrologia Empresarial é a aplicação de princípios astrológicos ao mundo dos negócios, finanças e empreendedorismo. Inclui a análise do momento de fundação de empresas (mapa astral da empresa), timing para lançamentos, fusões, contratos e decisões importantes, compatibilidade entre sócios, seleção de equipes e previsão de tendências de mercado. Astrólogos empresariais também analisam ciclos econômicos através de configurações planetárias maiores, como conjunções Júpiter-Saturno e ciclos de Urano e Plutão. Esta especialidade combina astrologia horária, eletiva, mundana e sinastria para oferecer insights estratégicos que complementam (não substituem) análises convencionais de mercado e planejamento empresarial.",
+    relatedTerms: [
+      "astrologia-financeira",
+      "ciclos-economicos",
+      "timing-de-negocios",
+      "mapa-empresarial",
+      "tendencias-de-mercado",
+    ],
+    image: "/placeholder.svg?height=200&width=200&query=business astrology market timing",
+    category: "ramos-astrologicos",
+  },
+  {
+    term: "Astrologia Financeira",
+    slug: "astrologia-financeira",
+    shortDefinition: "Estudo dos ciclos planetários para prever tendências econômicas e movimentos de mercado.",
+    description:
+      "A Astrologia Financeira é o estudo dos ciclos planetários e suas correlações com tendências econômicas, movimentos de mercado e comportamento de ativos financeiros. Esta especialidade analisa trânsitos planetários, eclipses, retrogradações e ciclos maiores como conjunções Júpiter-Saturno para identificar potenciais pontos de virada, períodos de expansão ou contração econômica e setores favorecidos em diferentes momentos. Praticantes desta área também podem analisar mapas astrais de bolsas de valores, moedas, commodities e até mesmo criptomoedas. A Astrologia Financeira é utilizada como ferramenta complementar por alguns investidores e traders, oferecendo uma perspectiva de timing baseada em ciclos cósmicos que vai além da análise técnica e fundamental convencional.",
+    relatedTerms: [
+      "ciclos-economicos",
+      "mercado-financeiro",
+      "investimentos",
+      "astrologia-empresarial",
+      "previsao-de-mercado",
+    ],
+    image: "/placeholder.svg?height=200&width=200&query=financial astrology market cycles investment",
+    category: "ramos-astrologicos",
+  },
+  {
+    term: "Zodíaco Sideral",
+    slug: "zodiaco-sideral",
+    shortDefinition: "Sistema zodiacal baseado nas constelações físicas, utilizado na astrologia védica.",
+    description:
+      "O Zodíaco Sideral é um sistema zodiacal que se alinha com as constelações físicas no céu, em contraste com o Zodíaco Tropical que se baseia nas estações do ano. Devido à precessão dos equinócios (um movimento lento da Terra que causa um deslocamento gradual entre os dois sistemas), existe atualmente uma diferença de aproximadamente 23° entre os zodíacos sideral e tropical. O Zodíaco Sideral é utilizado principalmente na Astrologia Védica (Jyotish) e em algumas outras tradições astrológicas orientais. Neste sistema, as posições planetárias são calculadas em relação às estrelas fixas, o que resulta em posições de signos diferentes das encontradas na astrologia ocidental para a mesma data de nascimento.",
+    relatedTerms: ["zodiaco-tropical", "astrologia-vedica", "precessao-dos-equinocios", "jyotish", "ayanamsa"],
+    image: "/placeholder.svg?height=200&width=200&query=sidereal zodiac constellations vedic astrology",
+    category: "sistemas-astrologicos",
+  },
+  {
+    term: "Zodíaco Tropical",
+    slug: "zodiaco-tropical",
+    shortDefinition: "Sistema zodiacal baseado nas estações do ano, utilizado na astrologia ocidental.",
+    description:
+      "O Zodíaco Tropical é um sistema zodiacal baseado nas estações do ano, onde o ponto zero de Áries é definido pelo equinócio de primavera no hemisfério norte (por volta de 21 de março). Este sistema, utilizado predominantemente na astrologia ocidental, não se alinha diretamente com as constelações físicas devido à precessão dos equinócios. O Zodíaco Tropical é um sistema sazonal que reflete os ciclos da natureza e a relação da Terra com o Sol ao longo do ano. Seus defensores argumentam que ele captura melhor as energias arquetípicas associadas a cada período do ano e as qualidades essenciais dos signos, independentemente da posição das constelações físicas.",
+    relatedTerms: ["zodiaco-sideral", "astrologia-ocidental", "equinocio", "solsticio", "estacoes"],
+    image: "/placeholder.svg?height=200&width=200&query=tropical zodiac seasons western astrology",
+    category: "sistemas-astrologicos",
   },
 ]
