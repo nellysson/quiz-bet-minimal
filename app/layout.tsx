@@ -35,6 +35,12 @@ export default function RootLayout({
         {/* Adicione uma meta tag com o BUILD_ID para forçar atualização */}
         <meta name="build-id" content={BUILD_ID} />
 
+        {/* Adicionar o link para o favicon no head */}
+        <link
+          rel="icon"
+          href="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/favicon-e69ktUdfOcrqDjK3ItvBFenrTXcgdm.png"
+        />
+
         {/* Google AdSense */}
         <script
           async
