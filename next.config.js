@@ -60,6 +60,11 @@ const nextConfig = {
         destination: "/api/sitemap",
         permanent: true,
       },
+      {
+        source: "/planetasitemap.xml",
+        destination: "/api/planetasitemap",
+        permanent: true,
+      },
     ]
   },
 }
