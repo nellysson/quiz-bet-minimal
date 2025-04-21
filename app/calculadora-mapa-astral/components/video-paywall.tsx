@@ -3,7 +3,7 @@
 import { useState, useEffect, useRef } from "react"
 import { Button } from "@/components/ui/button"
 import { Card, CardContent, CardFooter, CardHeader, CardTitle } from "@/components/ui/card"
-import { Clock } from "lucide-react"
+import { Clock, Play } from "lucide-react"
 
 interface VideoPaywallProps {
   onComplete: () => void
@@ -13,10 +13,12 @@ export default function VideoPaywall({ onComplete }: VideoPaywallProps) {
   const [timeRemaining, setTimeRemaining] = useState(30)
   const [isPlaying, setIsPlaying] = useState(false)
   const [hasStarted, setHasStarted] = useState(false)
+  const [imaLoaded, setImaLoaded] = useState(false)
   const videoRef = useRef<HTMLVideoElement>(null)
   const adContainerRef = useRef<HTMLDivElement>(null)
   const containerRef = useRef<HTMLDivElement>(null)
   const timerRef = useRef<NodeJS.Timeout | null>(null)
+  const adsLoaderRef = useRef<any>(null)
 
   // Função para calcular as dimensões do player com base no tamanho do container
   const getPlayerDimensions = () => {
@@ -29,46 +31,52 @@ export default function VideoPaywall({ onComplete }: VideoPaywallProps) {
     return { width: containerWidth, height }
   }
 
-  // Inicializar o anúncio quando o componente montar
+  // Carregar o script do IMA SDK quando o componente montar
   useEffect(() => {
     // Função para carregar o script do IMA SDK
     const loadImaScript = () => {
+      if (document.querySelector('script[src*="ima3.js"]')) {
+        setImaLoaded(true)
+        return
+      }
+
       const script = document.createElement("script")
       script.src = "//imasdk.googleapis.com/js/sdkloader/ima3.js"
       script.async = true
-      script.onload = initializeIMA
+      script.onload = () => setImaLoaded(true)
       document.head.appendChild(script)
     }
 
     // Verificar se o script já está carregado
     if (window.google && window.google.ima) {
-      initializeIMA()
+      setImaLoaded(true)
     } else {
       loadImaScript()
     }
-
-    // Adicionar listener para redimensionamento da janela
-    const handleResize = () => {
-      if (window.google && window.google.ima && adContainerRef.current) {
-        initializeIMA()
-      }
-    }
-
-    window.addEventListener("resize", handleResize)
 
     return () => {
       // Limpar o timer quando o componente desmontar
       if (timerRef.current) {
         clearInterval(timerRef.current)
       }
-      window.removeEventListener("resize", handleResize)
+
+      // Limpar o adsLoader se existir
+      if (adsLoaderRef.current) {
+        adsLoaderRef.current.destroy()
+      }
     }
   }, [])
 
-  // Inicializar o IMA SDK
+  // Inicializar o IMA SDK e começar a reprodução
   const initializeIMA = () => {
     if (!window.google || !window.google.ima || !videoRef.current || !adContainerRef.current) {
       console.error("IMA SDK não está disponível ou referências não estão prontas")
+      // Fallback: reproduzir o vídeo normal
+      if (videoRef.current) {
+        videoRef.current.play()
+        setIsPlaying(true)
+        startTimer()
+      }
       return
     }
 
@@ -85,6 +93,7 @@ export default function VideoPaywall({ onComplete }: VideoPaywallProps) {
 
       // Criar o gerenciador de anúncios
       const adsLoader = new window.google.ima.AdsLoader(adDisplayContainer)
+      adsLoaderRef.current = adsLoader
 
       // Configurar os eventos do gerenciador de anúncios
       adsLoader.addEventListener(window.google.ima.AdsManagerLoadedEvent.Type.ADS_MANAGER_LOADED, (event: any) => {
@@ -97,12 +106,26 @@ export default function VideoPaywall({ onComplete }: VideoPaywallProps) {
         })
 
         adsManager.addEventListener(window.google.ima.AdEvent.Type.COMPLETE, () => {
-          setIsPlaying(false)
           if (timeRemaining > 0) {
             // Se o anúncio terminar antes dos 30 segundos, continuar com o vídeo normal
             if (videoRef.current) {
               videoRef.current.play()
             }
+          }
+        })
+
+        adsManager.addEventListener(window.google.ima.AdEvent.Type.ALL_ADS_COMPLETED, () => {
+          // Quando todos os anúncios terminarem, reproduzir o vídeo normal
+          if (videoRef.current && timeRemaining > 0) {
+            videoRef.current.play()
+          }
+        })
+
+        adsManager.addEventListener(window.google.ima.AdErrorEvent.Type.AD_ERROR, () => {
+          // Em caso de erro, reproduzir o vídeo normal
+          if (videoRef.current) {
+            videoRef.current.play()
+            startTimer()
           }
         })
 
@@ -115,7 +138,6 @@ export default function VideoPaywall({ onComplete }: VideoPaywallProps) {
           // Em caso de erro, reproduzir o vídeo normal
           if (videoRef.current) {
             videoRef.current.play()
-            setIsPlaying(true)
             startTimer()
           }
         }
@@ -139,7 +161,6 @@ export default function VideoPaywall({ onComplete }: VideoPaywallProps) {
       // Em caso de erro, reproduzir o vídeo normal
       if (videoRef.current) {
         videoRef.current.play()
-        setIsPlaying(true)
         startTimer()
       }
     }
@@ -164,19 +185,25 @@ export default function VideoPaywall({ onComplete }: VideoPaywallProps) {
     }
   }
 
-  // Iniciar a reprodução do vídeo manualmente (necessário para alguns navegadores)
+  // Iniciar a reprodução do vídeo manualmente quando o usuário clicar no botão de play
   const handleStartVideo = () => {
-    if (videoRef.current) {
-      videoRef.current.play()
-      setIsPlaying(true)
-      startTimer()
+    setIsPlaying(true)
+
+    // Inicializar o IMA SDK e começar a reprodução
+    if (imaLoaded) {
+      initializeIMA()
+    } else {
+      // Se o IMA SDK não estiver carregado, reproduzir o vídeo normal
+      if (videoRef.current) {
+        videoRef.current.play()
+        startTimer()
+      }
     }
   }
 
-  // Fallback para iniciar o timer se o anúncio não carregar
+  // Fallback para o caso do vídeo começar a reproduzir sem o IMA
   const handleVideoPlay = () => {
-    if (!isPlaying) {
-      setIsPlaying(true)
+    if (!hasStarted) {
       startTimer()
     }
   }
@@ -194,34 +221,39 @@ export default function VideoPaywall({ onComplete }: VideoPaywallProps) {
           {/* Vídeo principal */}
           <video
             ref={videoRef}
-            className="w-full h-auto aspect-video"
+            className="w-full h-auto aspect-video bg-black"
             src="https://media.canva.com/v2/files/uri:ifs%3A%2F%2FV%2F40uPmaCfkyZ-IsFUcFCh56eNDev-fkAUz12th9RLZPg.mp4?csig=AAAAAAAAAAAAAAAAAAAAALPX0JvuJW4SeVxN50ZjcH96oCdhaOleY8WC0DaHWVhz&exp=1745280120&signer=video-rpc&token=AAIAAVYALzQwdVBtYUNma3laLUlzRlVjRkNoNTZlTkRldi1ma0FVejEydGg5UkxaUGcubXA0AAAAAAGWWs00wL34c6CuJVXf9LuL6LB9cdmZVv1PnRYjlWq9B-p_RNC-"
             controls={false}
             playsInline
             onPlay={handleVideoPlay}
             muted={false}
+            poster="/cosmic-dust.png"
           />
 
-          {/* Botão de iniciar para dispositivos móveis */}
-          {!isPlaying && !hasStarted && (
+          {/* Botão de play sempre visível até que o vídeo comece */}
+          {!isPlaying && (
             <Button
-              className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 z-20"
+              className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 z-20 rounded-full w-16 h-16 flex items-center justify-center"
               onClick={handleStartVideo}
+              variant="outline"
+              size="icon"
             >
-              Iniciar Vídeo
+              <Play className="h-8 w-8" />
             </Button>
           )}
         </div>
 
-        {/* Contador */}
-        <div className="mt-6 flex items-center justify-center gap-2 text-base md:text-lg font-medium">
-          <Clock className="h-5 w-5" />
-          <span>
-            {timeRemaining > 0
-              ? `Aguarde ${timeRemaining} segundos para acessar seu mapa astral`
-              : "Você já pode acessar seu mapa astral!"}
-          </span>
-        </div>
+        {/* Contador - só exibido após o início da reprodução */}
+        {hasStarted && (
+          <div className="mt-6 flex items-center justify-center gap-2 text-base md:text-lg font-medium">
+            <Clock className="h-5 w-5" />
+            <span>
+              {timeRemaining > 0
+                ? `Aguarde ${timeRemaining} segundos para acessar seu mapa astral`
+                : "Você já pode acessar seu mapa astral!"}
+            </span>
+          </div>
+        )}
       </CardContent>
       <CardFooter className="flex justify-center px-4 pb-6">
         <Button onClick={onComplete} disabled={timeRemaining > 0} size="lg" className="mt-2 w-full sm:w-auto">
