@@ -4,7 +4,6 @@ import { notFound } from "next/navigation"
 import { ArrowLeft } from "lucide-react"
 import { Button } from "@/components/ui/button"
 import { astrologiaVedicaTopics } from "@/data/astrologia-vedica-topics"
-import Image from "next/image"
 
 interface AstrologiaVedicaPageProps {
   params: {
@@ -41,6 +40,11 @@ export default function AstrologiaVedicaPage({ params }: AstrologiaVedicaPagePro
     notFound()
   }
 
+  // Encontrar o índice do tópico atual
+  const currentIndex = astrologiaVedicaTopics.findIndex((t) => t.slug === params.slug)
+  const prevTopic = currentIndex > 0 ? astrologiaVedicaTopics[currentIndex - 1] : null
+  const nextTopic = currentIndex < astrologiaVedicaTopics.length - 1 ? astrologiaVedicaTopics[currentIndex + 1] : null
+
   return (
     <div className="container mx-auto px-4 py-8">
       <Button variant="ghost" asChild className="mb-6">
@@ -50,55 +54,63 @@ export default function AstrologiaVedicaPage({ params }: AstrologiaVedicaPagePro
         </Link>
       </Button>
 
-      <div className="mb-8 grid gap-8 md:grid-cols-3">
-        <div className="md:col-span-2">
-          <h1 className="text-3xl font-bold mb-4">{topic.name}</h1>
-
-          <div className="bg-muted/30 rounded-lg px-4 py-3 mb-6 inline-block">
-            <span className="text-lg">{topic.shortDescription}</span>
+      <article className="max-w-4xl mx-auto">
+        <header className="mb-8">
+          <h1 className="text-4xl font-bold mb-4">{topic.name}</h1>
+          <div className="bg-muted/30 rounded-lg px-6 py-4 mb-6">
+            <p className="text-xl">{topic.shortDescription}</p>
           </div>
+        </header>
 
-          <div className="prose prose-lg dark:prose-invert max-w-none">
-            {topic.description.split("\n\n").map((paragraph, index) => (
-              <p key={index}>{paragraph}</p>
-            ))}
-          </div>
-        </div>
-        <div>
-          <div className="sticky top-24">
-            <div className="relative aspect-square w-full overflow-hidden rounded-lg mb-4">
-              <Image
-                src={
-                  topic.image && topic.image.trim() !== ""
-                    ? topic.image
-                    : "/placeholder.svg?height=400&width=400&query=vedic+astrology+symbol"
-                }
-                alt={topic.name}
-                fill
-                className="object-cover"
-              />
-            </div>
-            <div className="bg-muted/30 rounded-lg p-4">
-              <h3 className="font-medium mb-2">Explore mais tópicos</h3>
-              <ul className="space-y-2">
-                {astrologiaVedicaTopics
-                  .filter((t) => t.slug !== topic.slug)
-                  .slice(0, 3)
-                  .map((relatedTopic) => (
-                    <li key={relatedTopic.slug}>
-                      <Link
-                        href={`/categorias/astrologia-vedica/${relatedTopic.slug}`}
-                        className="text-primary hover:underline"
-                      >
-                        {relatedTopic.name}
-                      </Link>
-                    </li>
+        <div className="prose prose-lg dark:prose-invert max-w-none mb-12">
+          {topic.fullContent ? (
+            <>
+              {topic.fullContent.map((section, index) => (
+                <section key={index} className="mb-8">
+                  {section.title && <h2 className="text-2xl font-semibold mb-4">{section.title}</h2>}
+                  {section.content.map((paragraph, pIndex) => (
+                    <p key={pIndex} className="mb-4">
+                      {paragraph}
+                    </p>
                   ))}
-              </ul>
-            </div>
+                </section>
+              ))}
+            </>
+          ) : (
+            <>
+              {topic.description.split("\n\n").map((paragraph, index) => (
+                <p key={index} className="mb-4">
+                  {paragraph}
+                </p>
+              ))}
+            </>
+          )}
+        </div>
+
+        <div className="border-t border-border pt-6">
+          <h3 className="text-xl font-semibold mb-4">Explore mais tópicos de Astrologia Védica</h3>
+          <div className="grid gap-4 md:grid-cols-2">
+            {prevTopic && (
+              <Link
+                href={`/categorias/astrologia-vedica/${prevTopic.slug}`}
+                className="p-4 border border-border rounded-lg hover:bg-muted/50 transition-colors"
+              >
+                <span className="text-sm text-muted-foreground">Anterior</span>
+                <p className="font-medium">{prevTopic.name}</p>
+              </Link>
+            )}
+            {nextTopic && (
+              <Link
+                href={`/categorias/astrologia-vedica/${nextTopic.slug}`}
+                className="p-4 border border-border rounded-lg hover:bg-muted/50 transition-colors"
+              >
+                <span className="text-sm text-muted-foreground">Próximo</span>
+                <p className="font-medium">{nextTopic.name}</p>
+              </Link>
+            )}
           </div>
         </div>
-      </div>
+      </article>
     </div>
   )
 }

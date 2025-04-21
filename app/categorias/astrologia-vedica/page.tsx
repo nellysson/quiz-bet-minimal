@@ -1,7 +1,6 @@
 import type { Metadata } from "next"
-import Image from "next/image"
 import Link from "next/link"
-import { Card, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card"
+import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card"
 import { astrologiaVedicaTopics } from "@/data/astrologia-vedica-topics"
 
 export const metadata: Metadata = {
@@ -12,12 +11,23 @@ export const metadata: Metadata = {
 export default function AstrologiaVedicaPage() {
   return (
     <div className="container mx-auto px-4 py-8">
-      <div className="mb-8 text-center">
-        <h1 className="text-4xl font-bold mb-4">Astrologia Védica</h1>
-        <p className="text-xl max-w-3xl mx-auto">
-          Explore os conceitos fundamentais da astrologia védica indiana, também conhecida como Jyotish, um sistema
-          astrológico com raízes nos antigos textos védicos.
-        </p>
+      <div className="mb-8">
+        <h1 className="text-4xl font-bold mb-4">Astrologia Védica (Jyotish)</h1>
+        <div className="prose prose-lg dark:prose-invert max-w-none mb-6">
+          <p>
+            A Astrologia Védica, também conhecida como Jyotish (que significa "ciência da luz"), é um dos sistemas
+            astrológicos mais antigos do mundo, com origens que remontam a mais de 5.000 anos na Índia antiga.
+          </p>
+          <p>
+            Diferente da Astrologia Ocidental que utiliza o zodíaco tropical, a Astrologia Védica baseia-se no zodíaco
+            sideral, que está alinhado com as posições reais das constelações no céu. Esta diferença fundamental resulta
+            em interpretações e cálculos distintos entre os dois sistemas.
+          </p>
+          <p>
+            Explore os tópicos abaixo para aprofundar seu conhecimento sobre este fascinante sistema astrológico que
+            continua a influenciar milhões de pessoas ao redor do mundo.
+          </p>
+        </div>
       </div>
 
       <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
@@ -27,25 +37,16 @@ export default function AstrologiaVedicaPage() {
             key={topic.slug}
             className="transition-transform hover:scale-[1.02]"
           >
-            <Card className="h-full overflow-hidden">
-              <div className="relative h-48 w-full">
-                <Image
-                  src={
-                    topic.image && topic.image.trim() !== ""
-                      ? topic.image
-                      : "/placeholder.svg?height=400&width=600&query=vedic+astrology"
-                  }
-                  alt={topic.name}
-                  fill
-                  className="object-cover"
-                />
-              </div>
+            <Card className="h-full">
               <CardHeader>
-                <CardTitle>{topic.name}</CardTitle>
-                <CardDescription>{topic.shortDescription}</CardDescription>
+                <CardTitle className="text-xl">{topic.name}</CardTitle>
+                <CardDescription className="text-base">{topic.shortDescription}</CardDescription>
               </CardHeader>
+              <CardContent>
+                <p className="line-clamp-3 text-muted-foreground">{topic.description.split(".")[0]}.</p>
+              </CardContent>
               <CardFooter>
-                <p className="text-sm text-muted-foreground">Saiba mais →</p>
+                <p className="text-sm text-primary font-medium">Saiba mais →</p>
               </CardFooter>
             </Card>
           </Link>
