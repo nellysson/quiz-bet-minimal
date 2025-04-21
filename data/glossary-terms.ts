@@ -208,7 +208,7 @@ export const glossaryTerms: GlossaryTerm[] = [
     description:
       "Na astrologia, Vênus representa o princípio do amor, beleza, harmonia, prazer, valores pessoais e afinidades. É o planeta associado a como amamos, o que valorizamos e apreciamos, e como buscamos prazer e satisfação.",
     relatedTerms: ["touro", "libra", "amor", "valores"],
-    image: "/placeholder.svg?height=200&width=200&query=venus symbol in astrology",
+    image: "/astrological-venus.png",
     category: "planetas",
   },
   // Novos termos a serem adicionados
@@ -219,7 +219,7 @@ export const glossaryTerms: GlossaryTerm[] = [
     description:
       "O Signo Solar é o signo do zodíaco onde o Sol estava posicionado no momento do seu nascimento. É o signo mais conhecido popularmente, aquele que as pessoas geralmente se referem quando perguntam 'qual é o seu signo?'. Representa a essência da personalidade, a expressão consciente do ser, a vitalidade e o propósito de vida.",
     relatedTerms: ["sol", "mapa-natal", "signos-do-zodiaco", "identidade"],
-    image: "/placeholder.svg?height=200&width=200&query=sun sign zodiac wheel",
+    image: "/zodiac-wheel-sunsigns.png",
     category: "signos",
   },
   {
@@ -229,7 +229,7 @@ export const glossaryTerms: GlossaryTerm[] = [
     description:
       "O Signo Lunar é o signo do zodíaco onde a Lua estava posicionada no momento do seu nascimento. Representa o mundo emocional, as reações instintivas, necessidades de segurança, hábitos e padrões subconscientes. Enquanto o Signo Solar mostra quem você é conscientemente, o Signo Lunar revela quem você é emocionalmente e como reage instintivamente às situações.",
     relatedTerms: ["lua", "mapa-natal", "signos-do-zodiaco", "emocoes"],
-    image: "/placeholder.svg?height=200&width=200&query=moon sign zodiac emotional nature",
+    image: "/celestial-emotions.png",
     category: "signos",
   },
   {
@@ -239,7 +239,7 @@ export const glossaryTerms: GlossaryTerm[] = [
     description:
       "Na astrologia, Marte representa o princípio da energia, ação, iniciativa, coragem, desejo, assertividade e impulso. É o planeta associado a como agimos, como expressamos nossa raiva, como perseguimos nossos desejos e como competimos. Marte também está ligado à sexualidade, especialmente no aspecto de desejo e conquista.",
     relatedTerms: ["aries", "escorpiao", "energia", "acao", "desejo"],
-    image: "/placeholder.svg?height=200&width=200&query=mars symbol in astrology red",
+    image: "/astrological-mars-red.png",
     category: "planetas",
   },
   {
@@ -249,7 +249,7 @@ export const glossaryTerms: GlossaryTerm[] = [
     description:
       "Na astrologia, Júpiter representa o princípio da expansão, crescimento, otimismo, abundância, sabedoria, fé e busca por significado. É o planeta associado a como expandimos nossos horizontes, seja através de viagens, educação superior, filosofia ou espiritualidade. Júpiter também está ligado à sorte, oportunidades e generosidade.",
     relatedTerms: ["sagitario", "peixes", "expansao", "crescimento", "abundancia"],
-    image: "/placeholder.svg?height=200&width=200&query=jupiter symbol in astrology",
+    image: "/astrological-jupiter-symbol.png",
     category: "planetas",
   },
   {
@@ -1072,7 +1072,7 @@ export const glossaryTerms: GlossaryTerm[] = [
     slug: "astrologia-financeira",
     shortDefinition: "Estudo dos ciclos planetários para prever tendências econômicas e movimentos de mercado.",
     description:
-      "A Astrologia Financeira é o estudo dos ciclos planetários e suas correlações com tendências econômicas, movimentos de mercado e comportamento de ativos financeiros. Esta especialidade analisa trânsitos planetários, eclipses, retrogradações e ciclos maiores como conjunções Júpiter-Saturno para identificar potenciais pontos de virada, períodos de expansão ou contração econômica e setores favorecidos em diferentes momentos. Praticantes desta área também podem analisar mapas astrais de bolsas de valores, moedas, commodities e até mesmo criptomoedas. A Astrologia Financeira é utilizada como ferramenta complementar por alguns investidores e traders, oferecendo uma perspectiva de timing baseada em ciclos cósmicos que vai além da análise técnica e fundamental convencional.",
+      "A Astrologia Financeira é o estudo dos ciclos planetários e suas correlações com tendências econômicas, movimentos de mercado e comportamento de ativos financeiros. Esta especialidade analisa trânsitos planetários, eclipses, retrogradações e ciclos maiores como conjunções Júpiter-Saturno e ciclos de Urano e Plutão para identificar potenciais pontos de virada, períodos de expansão ou contração econômica e setores favorecidos em diferentes momentos. Praticantes desta área também podem analisar mapas astrais de bolsas de valores, moedas, commodities e até mesmo criptomoedas. A Astrologia Financeira é utilizada como ferramenta complementar por alguns investidores e traders, oferecendo uma perspectiva de timing baseada em ciclos cósmicos que vai além da análise técnica e fundamental convencional.",
     relatedTerms: [
       "ciclos-economicos",
       "mercado-financeiro",
@@ -1102,5 +1102,658 @@ export const glossaryTerms: GlossaryTerm[] = [
     relatedTerms: ["zodiaco-sideral", "astrologia-ocidental", "equinocio", "solsticio", "estacoes"],
     image: "/placeholder.svg?height=200&width=200&query=tropical zodiac seasons western astrology",
     category: "sistemas-astrologicos",
+  },
+  {
+    term: "Aspecto Aplicativo",
+    slug: "aspecto-aplicativo",
+    shortDefinition: "Aspecto que está se formando entre dois planetas em movimento.",
+    description:
+      "Um Aspecto Aplicativo ocorre quando dois planetas estão se aproximando para formar um aspecto exato. Na astrologia tradicional e horária, os aspectos aplicativos são considerados mais potentes e indicam eventos que estão por vir ou situações que ainda se desenvolverão. A energia do aspecto está aumentando e seu efeito tende a ser mais forte e direto. Os aspectos aplicativos são especialmente importantes na astrologia horária e eletiva para determinar o timing e a probabilidade de eventos futuros.",
+    relatedTerms: ["aspectos-astrologicos", "aspecto-separativo", "orbe", "astrologia-horaria", "timing"],
+    image: "/placeholder.svg?height=200&width=200&query=applying aspect astrology planets approaching",
+    category: "aspectos",
+  },
+  {
+    term: "Aspecto Separativo",
+    slug: "aspecto-separativo",
+    shortDefinition: "Aspecto que está se desfazendo entre dois planetas em movimento.",
+    description:
+      "Um Aspecto Separativo ocorre quando dois planetas já formaram um aspecto exato e agora estão se afastando um do outro. Na astrologia tradicional e horária, os aspectos separativos indicam eventos que já ocorreram ou situações que estão perdendo força e influência. A energia do aspecto está diminuindo e seu efeito tende a ser mais fraco ou relacionado a questões do passado. Os aspectos separativos são importantes na astrologia horária para determinar se um evento já aconteceu ou se uma oportunidade já passou.",
+    relatedTerms: ["aspectos-astrologicos", "aspecto-aplicativo", "orbe", "astrologia-horaria", "timing"],
+    image: "/placeholder.svg?height=200&width=200&query=separating aspect astrology planets moving apart",
+    category: "aspectos",
+  },
+  {
+    term: "Signo Interceptado",
+    slug: "signo-interceptado",
+    shortDefinition: "Signo que está contido inteiramente dentro de uma casa, sem ocupar nenhuma cúspide.",
+    description:
+      "Um Signo Interceptado ocorre quando um signo inteiro está contido dentro de uma casa astrológica, sem ocupar nenhuma cúspide de casa. Isso acontece em sistemas de casas de tamanho desigual (como Placidus) e em latitudes extremas. Quando um signo está interceptado, sua energia pode ser de difícil acesso consciente, ficando 'presa' ou menos disponível para expressão direta. Os planetas em signos interceptados podem indicar talentos ocultos, questões kármicas ou áreas da vida que requerem esforço extra para serem integradas. A interceptação sempre ocorre em pares opostos do zodíaco.",
+    relatedTerms: ["casa-interceptada", "sistemas-de-casas", "signos-do-zodiaco", "cuspidesde-casas", "placidus"],
+    image: "/placeholder.svg?height=200&width=200&query=intercepted sign astrology hidden energy",
+    category: "signos",
+  },
+  {
+    term: "Casa Vazia",
+    slug: "casa-vazia",
+    shortDefinition: "Casa astrológica que não contém planetas.",
+    description:
+      "Uma Casa Vazia é uma casa astrológica que não contém nenhum planeta no mapa natal. Isso não significa que esta área da vida seja irrelevante ou inativa, apenas que não há um foco planetário direto nela. A energia e os assuntos desta casa são expressos principalmente através do planeta que a rege (o regente da casa), sua posição por signo e casa, e seus aspectos. Por exemplo, uma Casa 7 vazia (relacionamentos) seria interpretada observando-se onde está o regente de Libra (tradicionalmente Vênus) e como ele está configurado no mapa.",
+    relatedTerms: ["casas-astrologicas", "regente-da-casa", "planetas", "interpretacao-natal", "foco-de-energia"],
+    image: "/placeholder.svg?height=200&width=200&query=empty house astrology ruler interpretation",
+    category: "casas",
+  },
+  {
+    term: "Casa Interceptada",
+    slug: "casa-interceptada",
+    shortDefinition: "Casa que contém um signo interceptado em seu interior.",
+    description:
+      "Uma Casa Interceptada é uma casa astrológica que contém um signo interceptado em seu interior. Isso significa que há um signo completamente contido dentro da casa, sem ocupar nenhuma cúspide. As casas interceptadas frequentemente são maiores que as outras e contêm dois signos completos. Os assuntos desta casa podem ser complexos, com camadas ocultas ou aspectos que precisam ser trabalhados em profundidade. A expressão da casa depende tanto do signo na cúspide quanto do signo interceptado, criando uma dinâmica dual que pode requerer maior consciência para ser integrada efetivamente.",
+    relatedTerms: ["signo-interceptado", "sistemas-de-casas", "cuspidesde-casas", "placidus", "complexidade"],
+    image: "/placeholder.svg?height=200&width=200&query=intercepted house astrology complex energy",
+    category: "casas",
+  },
+  {
+    term: "Signo Dominante",
+    slug: "signo-dominante",
+    shortDefinition:
+      "Signo que exerce maior influência no mapa astral devido à concentração de planetas ou pontos importantes.",
+    description:
+      "Um Signo Dominante é aquele que exerce maior influência no mapa astral devido à concentração de planetas ou pontos importantes nele. Quando vários planetas (especialmente pessoais como Sol, Lua, Mercúrio, Vênus e Marte) estão no mesmo signo, as qualidades deste signo se tornam proeminentes na personalidade e experiência de vida da pessoa. O signo dominante pode se manifestar de forma mais evidente que o próprio signo solar, colorindo fortemente a expressão geral do indivíduo. A dominância também pode ocorrer quando o signo ascendente e solar são o mesmo, ou quando o regente do mapa está em seu próprio signo.",
+    relatedTerms: ["stellium", "concentracao-planetaria", "signos-do-zodiaco", "personalidade", "enfase-zodiacal"],
+    image: "/placeholder.svg?height=200&width=200&query=dominant sign astrology planetary concentration",
+    category: "signos",
+  },
+  {
+    term: "Astro Dominante",
+    slug: "astro-dominante",
+    shortDefinition: "Planeta que exerce maior influência no mapa astral devido à sua posição, aspectos ou função.",
+    description:
+      "O Astro Dominante é o planeta que exerce maior influência no mapa astral devido à sua posição, aspectos, função ou proeminência. Um planeta pode se tornar dominante por várias razões: estar angular (próximo aos ângulos do mapa), formar muitos aspectos com outros planetas, ser o regente do Ascendente (regente do mapa), estar em domicílio ou exaltação, ou ser o foco de uma configuração importante como um stellium ou yod. O astro dominante frequentemente indica uma função psicológica ou área de vida que assume papel central na experiência da pessoa, colorindo fortemente sua personalidade e abordagem geral da existência.",
+    relatedTerms: [
+      "planeta-regente",
+      "angulos-do-mapa",
+      "aspectos-astrologicos",
+      "dignidades-essenciais",
+      "personalidade",
+    ],
+    image: "/placeholder.svg?height=200&width=200&query=dominant planet astrology influential celestial body",
+    category: "planetas",
+  },
+  {
+    term: "Lunação",
+    slug: "lunacao",
+    shortDefinition: "Ciclo completo da Lua, do início de uma Lua Nova até o início da próxima.",
+    description:
+      "A Lunação é o ciclo completo da Lua, que dura aproximadamente 29,5 dias, do início de uma Lua Nova até o início da próxima. Este ciclo inclui todas as fases lunares: Lua Nova, Crescente, Cheia e Minguante. Na astrologia, cada lunação é influenciada pelo signo em que ocorre a Lua Nova e pelos aspectos que a conjunção Sol-Lua forma com outros planetas. As lunações são utilizadas para previsões de curto prazo e para compreender ciclos emocionais, criativos e de manifestação. Cada fase da lunação tem qualidades energéticas específicas que podem ser aproveitadas para diferentes tipos de atividades e iniciativas.",
+    relatedTerms: ["lua-nova", "lua-cheia", "fases-da-lua", "ciclos-lunares", "previsao-astrologica"],
+    image: "/placeholder.svg?height=200&width=200&query=lunation cycle moon phases astrology",
+    category: "fenomenos-astrologicos",
+  },
+  {
+    term: "Lua Nova",
+    slug: "lua-nova",
+    shortDefinition: "Fase lunar em que a Lua está em conjunção com o Sol, marcando o início de um novo ciclo.",
+    description:
+      "A Lua Nova ocorre quando a Lua está em conjunção com o Sol (mesmo grau do zodíaco), marcando o início de um novo ciclo lunar. Nesta fase, a Lua não é visível no céu noturno, pois sua face iluminada está voltada para longe da Terra. Astrologicamente, a Lua Nova representa novos começos, sementes sendo plantadas e o início de um ciclo de crescimento. É considerado um momento propício para definir intenções, iniciar projetos e visualizar o que se deseja manifestar. O signo em que ocorre a Lua Nova influencia a qualidade energética do ciclo de 29,5 dias que se inicia, destacando temas específicos a serem trabalhados.",
+    relatedTerms: ["lunacao", "conjuncao", "ciclos-lunares", "novos-comecos", "intencoes"],
+    image: "/placeholder.svg?height=200&width=200&query=new moon astrology beginnings intentions",
+    category: "fenomenos-astrologicos",
+  },
+  {
+    term: "Lua Crescente",
+    slug: "lua-crescente",
+    shortDefinition: "Fase lunar entre a Lua Nova e a Lua Cheia, representando crescimento e construção.",
+    description:
+      "A Lua Crescente é a fase lunar que ocorre entre a Lua Nova e a Lua Cheia, quando a porção iluminada da Lua visível da Terra está aumentando. Esta fase inclui o Primeiro Quarto (quando a Lua forma um ângulo de 90° com o Sol) e é associada a crescimento, construção e desenvolvimento. Astrologicamente, é um período favorável para tomar ações concretas, superar obstáculos iniciais e construir sobre as intenções estabelecidas na Lua Nova. A energia está em expansão, apoiando esforços consistentes e a superação de desafios. É um momento de comprometimento com o processo de manifestação e de ajustes necessários nos planos iniciais.",
+    relatedTerms: ["lunacao", "lua-nova", "primeiro-quarto", "crescimento", "acao"],
+    image: "/placeholder.svg?height=200&width=200&query=waxing moon astrology growth action",
+    category: "fenomenos-astrologicos",
+  },
+  {
+    term: "Lua Cheia",
+    slug: "lua-cheia",
+    shortDefinition: "Fase lunar em que a Lua está em oposição ao Sol, representando culminação e clareza.",
+    description:
+      "A Lua Cheia ocorre quando a Lua está em oposição ao Sol (180° de distância no zodíaco), com sua face completamente iluminada visível da Terra. Astrologicamente, representa o ponto de culminação, realização e máxima clareza no ciclo lunar. É um momento de maior consciência, quando questões ocultas vêm à tona e os resultados dos esforços iniciados na Lua Nova se tornam evidentes. A energia da Lua Cheia é intensa, amplificando emoções e intuição. É favorável para celebrações, rituais, trabalhos espirituais e para obter insights sobre situações. O signo em que ocorre a Lua Cheia influencia a qualidade desta culminação e os temas que são iluminados.",
+    relatedTerms: ["lunacao", "oposicao", "ciclos-lunares", "culminacao", "clareza", "consciencia"],
+    image: "/placeholder.svg?height=200&width=200&query=full moon astrology culmination awareness",
+    category: "fenomenos-astrologicos",
+  },
+  {
+    term: "Lua Minguante",
+    slug: "lua-minguante",
+    shortDefinition: "Fase lunar entre a Lua Cheia e a Lua Nova, representando liberação e reflexão.",
+    description:
+      "A Lua Minguante é a fase lunar que ocorre entre a Lua Cheia e a próxima Lua Nova, quando a porção iluminada da Lua visível da Terra está diminuindo. Esta fase inclui o Último Quarto (quando a Lua forma um ângulo de 270° com o Sol) e é associada a liberação, reflexão e integração. Astrologicamente, é um período favorável para soltar o que não serve mais, processar experiências, extrair aprendizados e preparar-se para o próximo ciclo. A energia está se interiorizando, apoiando a contemplação, finalização de projetos e a limpeza de padrões obsoletos. É um momento de gratidão pelo que foi realizado e de criação de espaço para novas possibilidades.",
+    relatedTerms: ["lunacao", "lua-cheia", "ultimo-quarto", "liberacao", "reflexao", "integracao"],
+    image: "/placeholder.svg?height=200&width=200&query=waning moon astrology release reflection",
+    category: "fenomenos-astrologicos",
+  },
+  {
+    term: "Eixo Nodal",
+    slug: "eixo-nodal",
+    shortDefinition: "Linha que conecta o Nodo Norte e o Nodo Sul, representando o caminho evolutivo da alma.",
+    description:
+      "O Eixo Nodal é a linha que conecta o Nodo Norte (Cabeça do Dragão) e o Nodo Sul (Cauda do Dragão) no mapa astral. Estes pontos são formados pela intersecção da órbita da Lua com a eclíptica (o caminho aparente do Sol). O eixo nodal representa o caminho evolutivo da alma, com o Nodo Sul indicando habilidades, padrões e comportamentos trazidos do passado (vidas passadas ou primeira metade da vida), e o Nodo Norte apontando para qualidades e experiências que precisamos desenvolver para evoluir espiritualmente. O signo e a casa onde se encontram os Nodos oferecem insights sobre as lições kármicas específicas e o propósito de vida da pessoa.",
+    relatedTerms: ["nodo-norte", "nodo-sul", "karma", "evolucao-espiritual", "proposito-de-vida"],
+    image: "/placeholder.svg?height=200&width=200&query=nodal axis astrology soul evolution path",
+    category: "pontos-especiais",
+  },
+  {
+    term: "Eixo do Dragão",
+    slug: "eixo-do-dragao",
+    shortDefinition: "Outro nome para o Eixo Nodal, referindo-se à mitologia do dragão celeste.",
+    description:
+      "O Eixo do Dragão é outro nome para o Eixo Nodal, referindo-se à antiga mitologia do dragão celeste cujo corpo atravessa o céu. Na tradição astrológica, a Cabeça do Dragão (Nodo Norte) e a Cauda do Dragão (Nodo Sul) representam os pontos onde o dragão 'engole' e 'libera' os luminares durante os eclipses. Esta terminologia tem raízes na astrologia védica e em tradições orientais, onde Rahu (Cabeça) e Ketu (Cauda) são considerados planetas sombra ou nodos lunares. O Eixo do Dragão carrega simbolismo profundo relacionado ao karma, destino e a jornada evolutiva da alma através de múltiplas encarnações.",
+    relatedTerms: ["eixo-nodal", "cabeça-do-dragao", "cauda-do-dragao", "rahu", "ketu", "eclipses"],
+    image: "/placeholder.svg?height=200&width=200&query=dragon axis astrology rahu ketu",
+    category: "pontos-especiais",
+  },
+  {
+    term: "Cabeça do Dragão",
+    slug: "cabeca-do-dragao",
+    shortDefinition: "Nome tradicional do Nodo Norte, representando o caminho de crescimento futuro.",
+    description:
+      "A Cabeça do Dragão é o nome tradicional do Nodo Norte lunar, um dos pontos onde a órbita da Lua cruza a eclíptica (o caminho aparente do Sol). Simbolicamente, representa o caminho de crescimento futuro, qualidades a serem desenvolvidas nesta vida e experiências que, embora possam ser desafiadoras inicialmente, são essenciais para a evolução espiritual. Na astrologia védica, é conhecido como Rahu e considerado um planeta sombra com natureza expansiva semelhante a Júpiter e Saturno. A posição da Cabeça do Dragão por signo e casa no mapa natal indica áreas onde somos chamados a sair da zona de conforto e desenvolver novas habilidades para cumprir nosso propósito maior.",
+    relatedTerms: ["nodo-norte", "eixo-nodal", "eixo-do-dragao", "rahu", "evolucao-espiritual"],
+    image: "/placeholder.svg?height=200&width=200&query=dragon's head north node astrology",
+    category: "pontos-especiais",
+  },
+  {
+    term: "Cauda do Dragão",
+    slug: "cauda-do-dragao",
+    shortDefinition: "Nome tradicional do Nodo Sul, representando padrões e habilidades do passado.",
+    description:
+      "A Cauda do Dragão é o nome tradicional do Nodo Sul lunar, um dos pontos onde a órbita da Lua cruza a eclíptica (o caminho aparente do Sol). Simbolicamente, representa padrões, comportamentos e habilidades trazidos do passado (vidas passadas ou primeira metade da vida). É uma zona de conforto e facilidade, mas também de possível estagnação se nos apegarmos demais a ela. Na astrologia védica, é conhecido como Ketu e considerado um planeta sombra com natureza espiritualizada semelhante a Marte e Netuno. A posição da Cauda do Dragão por signo e casa no mapa natal indica áreas onde temos talentos inatos mas que precisamos transcender ou utilizar de forma mais consciente para apoiar nosso caminho evolutivo.",
+    relatedTerms: ["nodo-sul", "eixo-nodal", "eixo-do-dragao", "ketu", "karma", "talentos-inatos"],
+    image: "/placeholder.svg?height=200&width=200&query=dragon's tail south node astrology",
+    category: "pontos-especiais",
+  },
+  {
+    term: "Trânsito de Saturno",
+    slug: "transito-de-saturno",
+    shortDefinition:
+      "Movimento de Saturno pelo zodíaco e sua interação com o mapa natal, trazendo lições de estrutura e responsabilidade.",
+    description:
+      "O Trânsito de Saturno refere-se ao movimento deste planeta pelo zodíaco e sua interação com pontos do mapa natal. Saturno leva aproximadamente 29,5 anos para completar uma volta no zodíaco, permanecendo cerca de 2,5 anos em cada signo. Seus trânsitos são conhecidos por trazer lições de estrutura, responsabilidade, limites e maturidade. Quando Saturno transita sobre planetas natais ou pontos sensíveis, frequentemente ocorrem desafios, restrições ou a necessidade de trabalho árduo e paciência. Períodos significativos incluem o Retorno de Saturno (aos 29-30 anos e 58-60 anos), os quadrantes de Saturno (aos 7, 14, 21, 36, 43 anos, etc.) e os trânsitos pelas casas angulares. Embora desafiadores, os trânsitos de Saturno oferecem oportunidades para construir fundações sólidas e alcançar realizações duradouras.",
+    relatedTerms: ["saturno", "retorno-de-saturno", "transitos-lentos", "responsabilidade", "estrutura", "maturidade"],
+    image: "/placeholder.svg?height=200&width=200&query=saturn transit astrology responsibility structure",
+    category: "transitos",
+  },
+  {
+    term: "Trânsito de Plutão",
+    slug: "transito-de-plutao",
+    shortDefinition:
+      "Movimento de Plutão pelo zodíaco e sua interação com o mapa natal, trazendo transformação profunda e regeneração.",
+    description:
+      "O Trânsito de Plutão refere-se ao movimento deste planeta pelo zodíaco e sua interação com pontos do mapa natal. Plutão leva aproximadamente 248 anos para completar uma volta no zodíaco, permanecendo entre 12 e 31 anos em cada signo (devido à sua órbita excêntrica). Seus trânsitos são conhecidos por trazer transformações profundas, crises que levam à regeneração, encontros com poder e sombra, e processos de morte e renascimento simbólicos. Quando Plutão transita sobre planetas natais ou pontos sensíveis, frequentemente ocorrem mudanças irreversíveis, revelações de verdades ocultas e a necessidade de soltar controle. Embora intensos e por vezes dolorosos, os trânsitos de Plutão oferecem oportunidades para empoderamento autêntico e renovação profunda após processos de purificação.",
+    relatedTerms: ["plutao", "transitos-lentos", "transformacao", "poder", "regeneracao", "morte-e-renascimento"],
+    image: "/placeholder.svg?height=200&width=200&query=pluto transit astrology transformation regeneration",
+    category: "transitos",
+  },
+  {
+    term: "Trânsito de Netuno",
+    slug: "transito-de-netuno",
+    shortDefinition:
+      "Movimento de Netuno pelo zodíaco e sua interação com o mapa natal, trazendo dissolução de fronteiras e expansão espiritual.",
+    description:
+      "O Trânsito de Netuno refere-se ao movimento deste planeta pelo zodíaco e sua interação com pontos do mapa natal. Netuno leva aproximadamente 165 anos para completar uma volta no zodíaco, permanecendo cerca de 14 anos em cada signo. Seus trânsitos são conhecidos por trazer dissolução de fronteiras, experiências místicas ou espirituais, inspiração criativa, mas também confusão, ilusão e a necessidade de transcender o ego. Quando Netuno transita sobre planetas natais ou pontos sensíveis, frequentemente ocorrem períodos de nebulosidade, idealização, desilusão e eventual clareza espiritual. Os trânsitos de Netuno pedem rendição ao fluxo da vida, desenvolvimento da intuição e compaixão, e a capacidade de navegar em águas incertas com fé e sensibilidade.",
+    relatedTerms: ["netuno", "transitos-lentos", "espiritualidade", "intuicao", "dissolucao", "transcendencia"],
+    image: "/placeholder.svg?height=200&width=200&query=neptune transit astrology spirituality dissolution",
+    category: "transitos",
+  },
+  {
+    term: "Trânsito de Urano",
+    slug: "transito-de-urano",
+    shortDefinition:
+      "Movimento de Urano pelo zodíaco e sua interação com o mapa natal, trazendo mudanças súbitas e libertação.",
+    description:
+      "O Trânsito de Urano refere-se ao movimento deste planeta pelo zodíaco e sua interação com pontos do mapa natal. Urano leva aproximadamente 84 anos para completar uma volta no zodíaco, permanecendo cerca de 7 anos em cada signo. Seus trânsitos são conhecidos por trazer mudanças súbitas, quebra de padrões, libertação, originalidade e eventos inesperados. Quando Urano transita sobre planetas natais ou pontos sensíveis, frequentemente ocorrem revoluções pessoais, insights repentinos, separações necessárias e a urgência de expressar a individualidade autêntica. Períodos significativos incluem a Oposição de Urano (aos 38-44 anos) e o Retorno de Urano (aos 84 anos). Os trânsitos de Urano, embora desestabilizadores, oferecem oportunidades para despertar, inovação e alinhamento com o verdadeiro self além de condicionamentos sociais.",
+    relatedTerms: ["urano", "transitos-lentos", "mudanca", "liberdade", "originalidade", "despertar"],
+    image: "/placeholder.svg?height=200&width=200&query=uranus transit astrology change awakening",
+    category: "transitos",
+  },
+  {
+    term: "Planetas Geracionais",
+    slug: "planetas-geracionais",
+    shortDefinition:
+      "Urano, Netuno e Plutão, que permanecem em cada signo por anos ou décadas, influenciando gerações inteiras.",
+    description:
+      "Os Planetas Geracionais são Urano, Netuno e Plutão, que devido às suas órbitas longas, permanecem em cada signo por anos ou décadas, influenciando gerações inteiras. Urano (7 anos por signo) representa mudanças sociais, tecnologia e valores de liberdade de uma geração. Netuno (14 anos por signo) reflete ideais espirituais, artísticos e as ilusões coletivas. Plutão (12-31 anos por signo) indica transformações profundas nas estruturas de poder e obsessões coletivas. No mapa individual, a posição destes planetas por signo tem significado geracional, enquanto sua casa e aspectos com planetas pessoais mostram como estas energias coletivas se manifestam na experiência única da pessoa. Os planetas geracionais são especialmente importantes em análises sociológicas, históricas e de tendências culturais.",
+    relatedTerms: ["urano", "netuno", "plutao", "geracoes", "influencias-coletivas", "movimentos-sociais"],
+    image: "/placeholder.svg?height=200&width=200&query=generational planets astrology collective influence",
+    category: "planetas",
+  },
+  {
+    term: "Signo Cúspide",
+    slug: "signo-cuspide",
+    shortDefinition: "Nascimento próximo à transição entre dois signos, incorporando qualidades de ambos.",
+    description:
+      "O termo Signo Cúspide refere-se ao nascimento próximo à transição entre dois signos do zodíaco (geralmente dentro de 3 dias antes ou depois da mudança de signo), resultando na incorporação de qualidades de ambos os signos na personalidade. Por exemplo, alguém nascido na cúspide de Áries-Touro (por volta de 19-22 de abril) pode demonstrar tanto a iniciativa e coragem de Áries quanto a determinação e sensualidade de Touro. É importante notar que, tecnicamente, o Sol está sempre em um signo específico em determinado momento, mas a proximidade com o signo adjacente pode colorir a expressão do signo solar. Para determinar o signo solar exato, é necessário calcular o mapa natal com hora precisa de nascimento.",
+    relatedTerms: ["signos-do-zodiaco", "transicao-de-signos", "personalidade-mista", "sol", "influencias-zodiacais"],
+    image: "/placeholder.svg?height=200&width=200&query=cusp sign astrology mixed zodiac qualities",
+    category: "signos",
+  },
+  {
+    term: "Cúspide da Casa",
+    slug: "cuspide-da-casa",
+    shortDefinition:
+      "Linha divisória entre duas casas astrológicas, marcando o início de uma nova área de experiência.",
+    description:
+      "A Cúspide da Casa é a linha divisória entre duas casas astrológicas, marcando o início de uma nova área de experiência no mapa natal. O signo na cúspide de uma casa influencia como os assuntos daquela casa são expressos e abordados. Por exemplo, Virgem na cúspide da Casa 10 sugere uma abordagem meticulosa e analítica à carreira. As cúspides mais importantes são as dos ângulos: Ascendente (cúspide da Casa 1), Fundo do Céu (cúspide da Casa 4), Descendente (cúspide da Casa 7) e Meio do Céu (cúspide da Casa 10). Diferentes sistemas de casas calculam as cúspides de maneiras distintas, resultando em variações nas posições das casas. Planetas próximos a uma cúspide (dentro de 3-5 graus) podem influenciar ambas as casas adjacentes.",
+    relatedTerms: [
+      "casas-astrologicas",
+      "sistemas-de-casas",
+      "angulos-do-mapa",
+      "signos-nas-casas",
+      "interpretacao-natal",
+    ],
+    image: "/placeholder.svg?height=200&width=200&query=house cusp astrology division experience",
+    category: "casas",
+  },
+  {
+    term: "Planeta na Casa",
+    slug: "planeta-na-casa",
+    shortDefinition:
+      "Posicionamento de um planeta em uma determinada casa astrológica, influenciando como sua energia se manifesta.",
+    description:
+      "Planeta na Casa refere-se ao posicionamento de um planeta em uma determinada casa astrológica no mapa natal. Esta posição indica a área da vida onde a energia do planeta se manifesta mais fortemente e como ela é direcionada. Por exemplo, Vênus na Casa 5 indica que a energia de amor, prazer e valores estéticos se expressa através da criatividade, romance, filhos e atividades prazerosas. A interpretação de um planeta em uma casa considera tanto a natureza do planeta quanto o significado da casa, criando uma síntese única. Também são importantes os aspectos que o planeta forma com outros, sua dignidade essencial e o signo em que se encontra. A posição dos planetas por casa é fundamental na interpretação do mapa natal, revelando onde e como as diferentes energias planetárias são vivenciadas na experiência concreta da pessoa.",
+    relatedTerms: ["casas-astrologicas", "planetas", "interpretacao-natal", "areas-da-vida", "energia-planetaria"],
+    image: "/placeholder.svg?height=200&width=200&query=planet in house astrology life area expression",
+    category: "interpretacao-astrologica",
+  },
+  {
+    term: "Planeta fora de signo",
+    slug: "planeta-fora-de-signo",
+    shortDefinition: "Conceito errôneo, pois um planeta sempre está em algum signo do zodíaco.",
+    description:
+      "Planeta fora de signo é um conceito errôneo na astrologia, pois um planeta sempre está posicionado em algum signo do zodíaco. O zodíaco é um círculo completo de 360 graus dividido em 12 signos de 30 graus cada, cobrindo toda a eclíptica. Portanto, é astronomicamente impossível que um planeta esteja 'fora' de um signo. A confusão pode surgir quando se discute planetas em casas interceptadas ou quando um planeta está próximo à cúspide entre dois signos. No entanto, mesmo nestes casos, o planeta sempre ocupa um grau específico de um signo específico. Para determinar o signo exato de um planeta, é necessário calcular sua posição precisa em graus no mapa astral.",
+    relatedTerms: ["signos-do-zodiaco", "posicao-planetaria", "conceitos-erroneos", "ecliptica", "graus-zodiacais"],
+    image: "/placeholder.svg?height=200&width=200&query=planet zodiac sign position astrology misconception",
+    category: "conceitos-astrologicos",
+  },
+  {
+    term: "Planeta fora de curso",
+    slug: "planeta-fora-de-curso",
+    shortDefinition: "Estado em que um planeta não formará mais aspectos maiores antes de mudar de signo.",
+    description:
+      "Planeta fora de curso (ou void of course) é um estado em que um planeta não formará mais nenhum aspecto maior (conjunção, sextil, quadratura, trígono ou oposição) com outros planetas antes de mudar de signo. O termo é mais comumente aplicado à Lua, mas pode ser usado para qualquer planeta. Quando um planeta está fora de curso, sua energia pode se manifestar de forma menos direcionada, com resultados imprevisíveis ou ineficazes. Na astrologia horária e eletiva, planetas fora de curso (especialmente a Lua) são considerados desfavoráveis para iniciar novos empreendimentos, pois sugerem que a situação não se desenvolverá como planejado ou não terá consequências significativas. No entanto, este período pode ser favorável para atividades contemplativas, finalização de tarefas ou situações onde se deseja evitar interferências.",
+    relatedTerms: ["lua-fora-de-curso", "aspectos-astrologicos", "astrologia-horaria", "astrologia-eletiva", "timing"],
+    image: "/placeholder.svg?height=200&width=200&query=void of course planet astrology timing",
+    category: "estados-planetarios",
+  },
+  {
+    term: "Dignidade essencial",
+    slug: "dignidade-essencial",
+    shortDefinition:
+      "Força e eficácia de um planeta baseada em sua posição zodiacal (domicílio, exaltação, triplicidade, termo e face).",
+    description:
+      "Dignidade essencial é um conceito da astrologia tradicional que se refere à força e eficácia de um planeta baseada em sua posição zodiacal. Existem cinco dignidades essenciais, em ordem decrescente de força: domicílio (o signo regido naturalmente pelo planeta), exaltação (signo onde o planeta expressa suas qualidades de forma elevada), triplicidade (elemento compatível com o planeta), termo (segmentos específicos de cada signo atribuídos a diferentes planetas) e face (decanatos de 10 graus). Um planeta com muitas dignidades essenciais é considerado 'forte' e capaz de manifestar suas qualidades de forma positiva e eficaz. A análise das dignidades essenciais era fundamental na astrologia tradicional para avaliar a condição geral dos planetas e sua capacidade de produzir resultados favoráveis nas áreas da vida que governam.",
+    relatedTerms: [
+      "domicilio-planetario",
+      "exaltacao",
+      "triplicidade",
+      "termos-egipcios",
+      "faces-decanatos",
+      "astrologia-tradicional",
+    ],
+    image: "/placeholder.svg?height=200&width=200&query=essential dignity traditional astrology planetary strength",
+    category: "dignidades-planetarias",
+  },
+  {
+    term: "Dignidade acidental",
+    slug: "dignidade-acidental",
+    shortDefinition:
+      "Força de um planeta baseada em fatores como posição por casa, aspectos e outras condições circunstanciais.",
+    description:
+      "Dignidade acidental é um conceito da astrologia tradicional que se refere à força de um planeta baseada em fatores circunstanciais além de sua posição zodiacal. Inclui elementos como posição por casa (planetas em casas angulares são mais fortes), aspectos com outros planetas (especialmente com benéficos), velocidade (planetas rápidos são mais fortes), direção (direto vs. retrógrado), relação com o Sol (oriental ou ocidental), entre outros. Enquanto as dignidades essenciais se referem à natureza intrínseca do planeta, as dignidades acidentais refletem sua condição temporária ou contextual. Um planeta pode ter pouca dignidade essencial mas ser acidentalmente forte (ou vice-versa). Na astrologia tradicional, a combinação de dignidades essenciais e acidentais era utilizada para uma avaliação completa da condição planetária e sua capacidade de manifestação.",
+    relatedTerms: [
+      "dignidade-essencial",
+      "casas-angulares",
+      "aspectos-astrologicos",
+      "astrologia-tradicional",
+      "condicao-planetaria",
+    ],
+    image: "/placeholder.svg?height=200&width=200&query=accidental dignity traditional astrology planetary condition",
+    category: "dignidades-planetarias",
+  },
+  {
+    term: "Mapa Composto",
+    slug: "mapa-composto",
+    shortDefinition: "Mapa astrológico criado a partir da média matemática das posições planetárias de duas pessoas.",
+    description:
+      "O Mapa Composto é uma técnica de sinastria (astrologia de relacionamentos) que cria um novo mapa astrológico a partir da média matemática das posições planetárias e pontos de duas pessoas. Por exemplo, se o Sol de uma pessoa está a 15° de Áries e o da outra a 15° de Gêmeos, o Sol composto estará a 15° de Touro. Este mapa representa a relação como uma entidade própria, revelando sua dinâmica interna, propósito e potencial. O Mapa Composto é particularmente útil para entender relacionamentos de longo prazo, casamentos e parcerias de negócios. Ele mostra a 'personalidade' da relação, suas forças, desafios e o que os dois indivíduos criam juntos. Diferente da sinastria tradicional que compara dois mapas, o Composto cria um terceiro mapa que representa a união.",
+    relatedTerms: ["sinastria", "mapa-davison", "relacionamentos", "compatibilidade", "astrologia-de-relacionamentos"],
+    image: "/placeholder.svg?height=200&width=200&query=composite chart relationship astrology union",
+    category: "tecnicas-astrologicas",
+  },
+  {
+    term: "Mapa Dracônico",
+    slug: "mapa-draconico",
+    shortDefinition:
+      "Mapa astrológico calculado a partir do Nodo Norte como ponto de referência, revelando propósito espiritual.",
+    description:
+      "O Mapa Dracônico é uma técnica astrológica que recalcula as posições planetárias usando o Nodo Norte (Cabeça do Dragão) como ponto de referência zero, em vez do equinócio de primavera tradicional. Este mapa é considerado uma representação do propósito espiritual e da alma, revelando motivações mais profundas e aspectos kármicos que podem estar ocultos no mapa natal convencional. No Mapa Dracônico, as posições dos planetas são deslocadas em relação ao mapa natal, criando uma nova perspectiva interpretativa. Quando comparado com o mapa natal, o Dracônico pode revelar tensões entre a personalidade externa (natal) e o propósito da alma (dracônico). É particularmente valorizado na astrologia esotérica e kármica para compreender a missão espiritual e padrões de vidas passadas.",
+    relatedTerms: ["nodo-norte", "astrologia-karmica", "proposito-espiritual", "eixo-nodal", "evolucao-da-alma"],
+    image: "/placeholder.svg?height=200&width=200&query=draconic chart spiritual purpose soul astrology",
+    category: "tecnicas-astrologicas",
+  },
+  {
+    term: "Mapa Kármico",
+    slug: "mapa-karmico",
+    shortDefinition: "Análise do mapa natal focada em padrões de vidas passadas e lições da alma nesta encarnação.",
+    description:
+      "O Mapa Kármico é uma abordagem interpretativa que analisa o mapa natal com foco em padrões de vidas passadas e lições da alma nesta encarnação. Não é um mapa separado, mas uma leitura especializada do mapa natal convencional, dando ênfase a elementos considerados kármicos: Nodos Lunares, Saturno, Quíron, planetas retrógrados, a Casa 12, a Parte da Fortuna e aspectos específicos. O Mapa Kármico busca identificar talentos trazidos de outras vidas (Nodo Sul), desafios a serem superados (Saturno, Quíron), dívidas kármicas (planetas em quadratura com os Nodos) e o propósito evolutivo da alma (Nodo Norte). Esta abordagem oferece insights sobre padrões repetitivos, bloqueios subconscientes e o caminho de crescimento espiritual, ajudando a pessoa a compreender sua jornada em um contexto mais amplo de evolução da alma.",
+    relatedTerms: ["astrologia-karmica", "nodos-lunares", "saturno", "quiron", "planetas-retrogrados", "casa-12"],
+    image: "/placeholder.svg?height=200&width=200&query=karmic chart past lives soul lessons astrology",
+    category: "tecnicas-astrologicas",
+  },
+  {
+    term: "Sinastria Kármica",
+    slug: "sinastria-karmica",
+    shortDefinition: "Análise de relacionamentos focada em conexões de vidas passadas e propósito evolutivo conjunto.",
+    description:
+      "A Sinastria Kármica é uma abordagem especializada da astrologia de relacionamentos que foca em conexões de vidas passadas e no propósito evolutivo conjunto. Esta técnica examina aspectos específicos entre dois mapas natais que sugerem vínculos kármicos, como: contatos entre planetas pessoais e Nodos Lunares, aspectos envolvendo Saturno, Quíron e planetas retrógrados, conexões com a Casa 12, e padrões repetitivos de aspectos. A Sinastria Kármica busca identificar a natureza da conexão prévia (harmoniosa ou desafiadora), lições a serem aprendidas juntos, dívidas a serem pagas e o potencial de crescimento mútuo. Esta abordagem oferece uma perspectiva mais profunda sobre a atração magnética entre pessoas e o propósito espiritual do relacionamento, ajudando a transcender padrões limitantes e a honrar o contrato de almas subjacente.",
+    relatedTerms: [
+      "sinastria",
+      "astrologia-karmica",
+      "nodos-lunares",
+      "relacionamentos",
+      "contratos-de-alma",
+      "vidas-passadas",
+    ],
+    image: "/placeholder.svg?height=200&width=200&query=karmic synastry past life connections relationships",
+    category: "tecnicas-astrologicas",
+  },
+  {
+    term: "Mapa Progressivo",
+    slug: "mapa-progressivo",
+    shortDefinition:
+      "Mapa astrológico calculado a partir das progressões secundárias, mostrando a evolução pessoal ao longo do tempo.",
+    description:
+      "O Mapa Progressivo é um mapa astrológico calculado a partir das progressões secundárias, onde cada dia após o nascimento equivale a um ano de vida. Este mapa mostra a evolução psicológica e o desenvolvimento interno da pessoa ao longo do tempo. Diferente dos trânsitos que mostram influências externas temporárias, o Mapa Progressivo revela mudanças graduais na personalidade, atitudes e perspectivas. Elementos importantes incluem mudanças de signo dos planetas pessoais (especialmente Mercúrio, Vênus e Marte), fases progressadas da Lua (que ocorrem aproximadamente a cada 27-28 anos), e aspectos formados entre planetas progressados e natais. O Mapa Progressivo é interpretado em conjunto com o mapa natal e os trânsitos para uma compreensão completa do processo de desenvolvimento pessoal em determinado momento da vida.",
+    relatedTerms: [
+      "progressoes-secundarias",
+      "evolucao-pessoal",
+      "desenvolvimento-interno",
+      "previsao-astrologica",
+      "ciclos-de-vida",
+    ],
+    image: "/placeholder.svg?height=200&width=200&query=progressed chart evolution development astrology",
+    category: "tecnicas-astrologicas",
+  },
+  {
+    term: "Planeta em combustão",
+    slug: "planeta-em-combustao",
+    shortDefinition: "Planeta que está a menos de 8,5 graus do Sol, tendo sua energia ofuscada ou enfraquecida.",
+    description:
+      "Um Planeta em Combustão é aquele que está a menos de 8,5 graus do Sol (mas não dentro de 0,5 grau, o que seria cazimi). Na astrologia tradicional, esta condição é considerada uma debilidade acidental, pois o brilho intenso do Sol 'queima' ou ofusca a energia do planeta, tornando-a menos acessível ou eficaz. Planetas em combustão podem representar qualidades que são difíceis de expressar conscientemente, talentos subdesenvolvidos ou áreas da vida onde a pessoa sente falta de clareza ou confiança. Mercúrio e Vênus são os planetas mais frequentemente em combustão devido à proximidade de suas órbitas com o Sol. Esta condição era especialmente importante na astrologia horária e eletiva, onde planetas em combustão eram considerados enfraquecidos para produzir os resultados desejados.",
+    relatedTerms: [
+      "cazimi",
+      "dignidade-acidental",
+      "sol",
+      "debilidade-planetaria",
+      "astrologia-tradicional",
+      "conjuncao",
+    ],
+    image: "/placeholder.svg?height=200&width=200&query=combust planet astrology sun weakness",
+    category: "estados-planetarios",
+  },
+  {
+    term: "Planeta Cazimi",
+    slug: "planeta-cazimi",
+    shortDefinition: "Planeta que está a menos de 0,5 grau do Sol, tendo sua energia amplificada e fortalecida.",
+    description:
+      "Um Planeta Cazimi (do árabe 'kasimi', significando 'como se estivesse no coração') é aquele que está em conjunção exata com o Sol, a menos de 0,5 grau de distância. Diferente da combustão, que enfraquece o planeta, o cazimi é considerado uma condição de dignidade e força excepcional na astrologia tradicional. Um planeta cazimi está simbolicamente 'no coração do rei', recebendo proteção e poder especiais. Esta condição representa uma fusão perfeita entre a consciência (Sol) e a função específica do planeta, resultando em clareza, foco e eficácia extraordinários naquela área. Mercúrio e Vênus são os únicos planetas que podem estar cazimi. Na astrologia horária e eletiva, um planeta cazimi era considerado extremamente favorável para questões relacionadas à sua natureza.",
+    relatedTerms: [
+      "planeta-em-combustao",
+      "dignidade-acidental",
+      "sol",
+      "conjuncao",
+      "astrologia-tradicional",
+      "forca-planetaria",
+    ],
+    image: "/placeholder.svg?height=200&width=200&query=cazimi planet heart of sun astrology strength",
+    category: "estados-planetarios",
+  },
+  {
+    term: "Planeta retrógrado no natal",
+    slug: "planeta-retrogrado-no-natal",
+    shortDefinition:
+      "Planeta que aparenta movimento para trás no mapa natal, indicando internalização e revisão de sua energia.",
+    description:
+      "Um Planeta Retrógrado no Natal é aquele que, no momento do nascimento, aparentava mover-se para trás no zodíaco visto da Terra. Esta condição sugere que a energia do planeta é internalizada, revisada e processada de forma mais profunda e reflexiva. Planetas retrógrados natais frequentemente indicam áreas da vida que requerem reavaliação, integração de experiências passadas (possivelmente de vidas anteriores) e desenvolvimento não-convencional. Mercúrio retrógrado pode indicar um pensamento mais intuitivo que linear; Vênus retrógrado, uma reavaliação de valores e relacionamentos; Marte retrógrado, uma abordagem indireta à ação e assertividade. Aproximadamente 20% das pessoas nascem com Mercúrio retrógrado, enquanto planetas externos como Urano, Netuno e Plutão estão retrógrados cerca de 40% do tempo, tornando esta condição bastante comum.",
+    relatedTerms: ["planeta-retrogrado", "movimento-aparente", "internalizacao", "karma", "desenvolvimento-nao-linear"],
+    image: "/placeholder.svg?height=200&width=200&query=natal retrograde planet internalized energy",
+    category: "estados-planetarios",
+  },
+  {
+    term: "Eclipse Solar",
+    slug: "eclipse-solar",
+    shortDefinition: "Fenômeno astronômico onde a Lua bloqueia a luz do Sol, associado a novos começos significativos.",
+    description:
+      "O Eclipse Solar é um fenômeno astronômico que ocorre durante a Lua Nova, quando a Lua se posiciona entre a Terra e o Sol, bloqueando parcial ou totalmente a luz solar. Astrologicamente, os eclipses solares são considerados Luas Novas amplificadas, marcando períodos de novos começos significativos, mudanças de direção e eventos catalisadores. Ocorrem próximos aos Nodos Lunares e seus efeitos podem ser sentidos até seis meses após o evento. Quando um eclipse solar ativa pontos sensíveis no mapa natal (formando conjunção com planetas ou ângulos), pode desencadear novos capítulos importantes na área da vida representada pela casa onde ocorre. Os eclipses solares frequentemente trazem situações inesperadas que abrem portas para novos caminhos, embora possam inicialmente causar desorientação devido à 'luz' temporariamente bloqueada.",
+    relatedTerms: [
+      "lua-nova",
+      "nodos-lunares",
+      "eclipses",
+      "novos-comecos",
+      "mudancas-significativas",
+      "eventos-catalisadores",
+    ],
+    image: "/placeholder.svg?height=200&width=200&query=solar eclipse astrology new beginnings",
+    category: "fenomenos-astrologicos",
+  },
+  {
+    term: "Eclipse Lunar",
+    slug: "eclipse-lunar",
+    shortDefinition:
+      "Fenômeno astronômico onde a Terra bloqueia a luz do Sol na Lua, associado a culminações e revelações.",
+    description:
+      "O Eclipse Lunar é um fenômeno astronômico que ocorre durante a Lua Cheia, quando a Terra se posiciona entre o Sol e a Lua, projetando sua sombra sobre a superfície lunar. Astrologicamente, os eclipses lunares são considerados Luas Cheias amplificadas, marcando períodos de culminação, revelação e liberação. Ocorrem próximos aos Nodos Lunares e seus efeitos podem ser sentidos até seis meses após o evento. Quando um eclipse lunar ativa pontos sensíveis no mapa natal (formando conjunção ou oposição com planetas ou ângulos), pode trazer à tona questões subconscientes, finalizar ciclos importantes e revelar verdades ocultas na área da vida representada pela casa onde ocorre. Os eclipses lunares frequentemente trazem clareza emocional e insights profundos, embora possam inicialmente intensificar emoções e criar situações dramáticas que pedem resolução.",
+    relatedTerms: [
+      "lua-cheia",
+      "nodos-lunares",
+      "eclipses",
+      "culminacao",
+      "revelacao",
+      "liberacao",
+      "ciclos-emocionais",
+    ],
+    image: "/placeholder.svg?height=200&width=200&query=lunar eclipse astrology culmination revelation",
+    category: "fenomenos-astrologicos",
+  },
+  {
+    term: "Cruz Fixa",
+    slug: "cruz-fixa",
+    shortDefinition:
+      "Configuração formada pelos signos fixos (Touro, Leão, Escorpião e Aquário), representando estabilidade e determinação.",
+    description:
+      "A Cruz Fixa é uma configuração astrológica formada pelos quatro signos fixos do zodíaco: Touro, Leão, Escorpião e Aquário. Estes signos estão separados por 90 graus (formando quadraturas) ou 180 graus (formando oposições) entre si. A Cruz Fixa representa qualidades de estabilidade, determinação, persistência e resistência à mudança. Quando um mapa natal tem vários planetas nestes signos, especialmente nos ângulos, a pessoa tende a ser determinada, leal, resistente e capaz de manter o foco em objetivos de longo prazo. No entanto, também pode haver tendência à teimosia, inflexibilidade e dificuldade em adaptar-se a circunstâncias mutáveis. A Cruz Fixa está associada ao elemento Terra em seu aspecto mais estável e consolidador.",
+    relatedTerms: ["signos-fixos", "touro", "leao", "escorpiao", "aquario", "modalidades", "quadratura", "oposicao"],
+    image: "/placeholder.svg?height=200&width=200&query=fixed cross astrology stability determination",
+    category: "configuracoes-zodiacais",
+  },
+  {
+    term: "Cruz Mutável",
+    slug: "cruz-mutavel",
+    shortDefinition:
+      "Configuração formada pelos signos mutáveis (Gêmeos, Virgem, Sagitário e Peixes), representando adaptabilidade e versatilidade.",
+    description:
+      "A Cruz Mutável é uma configuração astrológica formada pelos quatro signos mutáveis do zodíaco: Gêmeos, Virgem, Sagitário e Peixes. Estes signos estão separados por 90 graus (formando quadraturas) ou 180 graus (formando oposições) entre si. A Cruz Mutável representa qualidades de adaptabilidade, versatilidade, flexibilidade e capacidade de resposta às mudanças. Quando um mapa natal tem vários planetas nestes signos, especialmente nos ângulos, a pessoa tende a ser versátil, comunicativa, curiosa e capaz de se ajustar a diferentes circunstâncias. No entanto, também pode haver tendência à dispersão, indecisão e dificuldade em manter o foco ou estabelecer estruturas estáveis. A Cruz Mutável está associada ao elemento Ar em seu aspecto mais fluido e comunicativo.",
+    relatedTerms: [
+      "signos-mutaveis",
+      "gemeos",
+      "virgem",
+      "sagitario",
+      "peixes",
+      "modalidades",
+      "quadratura",
+      "oposicao",
+    ],
+    image: "/placeholder.svg?height=200&width=200&query=mutable cross astrology adaptability versatility",
+    category: "configuracoes-zodiacais",
+  },
+  {
+    term: "Cruz Cardinal",
+    slug: "cruz-cardinal",
+    shortDefinition:
+      "Configuração formada pelos signos cardinais (Áries, Câncer, Libra e Capricórnio), representando iniciativa e ação.",
+    description:
+      "A Cruz Cardinal é uma configuração astrológica formada pelos quatro signos cardinais do zodíaco: Áries, Câncer, Libra e Capricórnio. Estes signos estão separados por 90 graus (formando quadraturas) ou 180 graus (formando oposições) entre si. A Cruz Cardinal representa qualidades de iniciativa, ação, liderança e capacidade de começar novos empreendimentos. Quando um mapa natal tem vários planetas nestes signos, especialmente nos ângulos, a pessoa tende a ser proativa, ambiciosa, orientada para objetivos e capaz de iniciar projetos com energia. No entanto, também pode haver tendência à impulsividade, impaciência e dificuldade em completar o que foi iniciado antes de passar para o próximo desafio. A Cruz Cardinal está associada ao elemento Fogo em seu aspecto mais dinâmico e iniciador.",
+    relatedTerms: [
+      "signos-cardinais",
+      "aries",
+      "cancer",
+      "libra",
+      "capricornio",
+      "modalidades",
+      "quadratura",
+      "oposicao",
+    ],
+    image: "/placeholder.svg?height=200&width=200&query=cardinal cross astrology initiative action",
+    category: "configuracoes-zodiacais",
+  },
+  {
+    term: "Eixo Áries–Libra",
+    slug: "eixo-aries-libra",
+    shortDefinition:
+      "Eixo zodiacal que representa a polaridade entre identidade individual (Áries) e relacionamentos (Libra).",
+    description:
+      "O Eixo Áries–Libra é um dos seis eixos polares do zodíaco, representando a dinâmica entre identidade individual (Áries) e relacionamentos/parcerias (Libra). Este eixo explora o equilíbrio entre autonomia e cooperação, assertividade e diplomacia, independência e interdependência. Áries, regido por Marte, representa o impulso para a autoafirmação, iniciativa e ação direta. Libra, regida por Vênus, representa a busca por harmonia, equilíbrio e conexão com os outros. Quando planetas ou pontos importantes (como os Nodos Lunares) se alinham neste eixo, a pessoa frequentemente trabalha com questões de identidade versus relacionamento, aprendendo a equilibrar necessidades pessoais com compromissos e a integrar assertividade com consideração pelos outros.",
+    relatedTerms: [
+      "aries",
+      "libra",
+      "polaridades-zodiacais",
+      "identidade",
+      "relacionamentos",
+      "equilibrio",
+      "eixos-zodiacais",
+    ],
+    image: "/placeholder.svg?height=200&width=200&query=aries libra axis identity relationships astrology",
+    category: "eixos-zodiacais",
+  },
+  {
+    term: "Eixo Touro–Escorpião",
+    slug: "eixo-touro-escorpiao",
+    shortDefinition:
+      "Eixo zodiacal que representa a polaridade entre recursos materiais (Touro) e recursos compartilhados/transformação (Escorpião).",
+    description:
+      "O Eixo Touro–Escorpião é um dos seis eixos polares do zodíaco, representando a dinâmica entre recursos materiais e valores pessoais (Touro) e recursos compartilhados, intimidade e transformação (Escorpião). Este eixo explora o equilíbrio entre estabilidade e mudança, posse e partilha, segurança e vulnerabilidade. Touro, regido por Vênus, representa o impulso para construir, acumular e desfrutar do mundo material com os cinco sentidos. Escorpião, tradicionalmente regido por Marte e modernamente por Plutão, representa a busca por profundidade emocional, intimidade transformadora e poder regenerativo. Quando planetas ou pontos importantes (como os Nodos Lunares) se alinham neste eixo, a pessoa frequentemente trabalha com questões de apego versus desapego, valores pessoais versus valores compartilhados, e segurança material versus transformação profunda.",
+    relatedTerms: [
+      "touro",
+      "escorpiao",
+      "polaridades-zodiacais",
+      "recursos",
+      "transformacao",
+      "valores",
+      "eixos-zodiacais",
+    ],
+    image: "/placeholder.svg?height=200&width=200&query=taurus scorpio axis resources transformation astrology",
+    category: "eixos-zodiacais",
+  },
+  {
+    term: "Eixo Gêmeos–Sagitário",
+    slug: "eixo-gemeos-sagitario",
+    shortDefinition:
+      "Eixo zodiacal que representa a polaridade entre conhecimento factual (Gêmeos) e compreensão filosófica (Sagitário).",
+    description:
+      "O Eixo Gêmeos–Sagitário é um dos seis eixos polares do zodíaco, representando a dinâmica entre conhecimento factual e comunicação cotidiana (Gêmeos) e compreensão filosófica, visão ampla e busca por significado (Sagitário). Este eixo explora o equilíbrio entre informação e sabedoria, percepção imediata e perspectiva expandida, curiosidade específica e busca por verdades universais. Gêmeos, regido por Mercúrio, representa o impulso para coletar informações, comunicar ideias e fazer conexões lógicas. Sagitário, regido por Júpiter, representa a busca por compreensão mais ampla, significado filosófico e expansão de horizontes. Quando planetas ou pontos importantes (como os Nodos Lunares) se alinham neste eixo, a pessoa frequentemente trabalha com questões de conhecimento versus sabedoria, fatos versus significados, e detalhes versus visão geral.",
+    relatedTerms: [
+      "gemeos",
+      "sagitario",
+      "polaridades-zodiacais",
+      "conhecimento",
+      "sabedoria",
+      "comunicacao",
+      "eixos-zodiacais",
+    ],
+    image: "/placeholder.svg?height=200&width=200&query=gemini sagittarius axis knowledge wisdom astrology",
+    category: "eixos-zodiacais",
+  },
+  {
+    term: "Eixo Câncer–Capricórnio",
+    slug: "eixo-cancer-capricornio",
+    shortDefinition:
+      "Eixo zodiacal que representa a polaridade entre lar/família (Câncer) e carreira/estrutura social (Capricórnio).",
+    description:
+      "O Eixo Câncer–Capricórnio é um dos seis eixos polares do zodíaco, representando a dinâmica entre lar, família e segurança emocional (Câncer) e carreira, estrutura social e responsabilidade pública (Capricórnio). Este eixo explora o equilíbrio entre vida privada e pública, nutrição emocional e realização material, raízes pessoais e ambições sociais. Câncer, regido pela Lua, representa o impulso para nutrir, proteger e criar conexões emocionais profundas. Capricórnio, regido por Saturno, representa a busca por estrutura, status, realização profissional e responsabilidade social. Quando planetas ou pontos importantes (como os Nodos Lunares) se alinham neste eixo, a pessoa frequentemente trabalha com questões de equilíbrio entre vida pessoal e profissional, segurança emocional versus realização material, e necessidades internas versus expectativas externas.",
+    relatedTerms: [
+      "cancer",
+      "capricornio",
+      "polaridades-zodiacais",
+      "lar",
+      "carreira",
+      "seguranca-emocional",
+      "eixos-zodiacais",
+    ],
+    image: "/placeholder.svg?height=200&width=200&query=cancer capricorn axis home career astrology",
+    category: "eixos-zodiacais",
+  },
+  {
+    term: "Eixo Leão–Aquário",
+    slug: "eixo-leao-aquario",
+    shortDefinition:
+      "Eixo zodiacal que representa a polaridade entre expressão individual (Leão) e consciência coletiva (Aquário).",
+    description:
+      "O Eixo Leão–Aquário é um dos seis eixos polares do zodíaco, representando a dinâmica entre expressão individual, criatividade pessoal e autoafirmação (Leão) e consciência coletiva, inovação social e pertencimento a grupos (Aquário). Este eixo explora o equilíbrio entre individualidade e coletividade, expressão pessoal e contribuição para o bem comum, criação e inovação. Leão, regido pelo Sol, representa o impulso para brilhar, expressar a singularidade e ser reconhecido por suas criações únicas. Aquário, tradicionalmente regido por Saturno e modernamente por Urano, representa a busca por originalidade dentro de contextos sociais, reforma de sistemas e conexão com ideais humanitários. Quando planetas ou pontos importantes (como os Nodos Lunares) se alinham neste eixo, a pessoa frequentemente trabalha com questões de expressão individual versus contribuição coletiva, reconhecimento pessoal versus progresso social.",
+    relatedTerms: [
+      "leao",
+      "aquario",
+      "polaridades-zodiacais",
+      "individualidade",
+      "coletividade",
+      "criatividade",
+      "eixos-zodiacais",
+    ],
+    image: "/placeholder.svg?height=200&width=200&query=leo aquarius axis individual collective astrology",
+    category: "eixos-zodiacais",
+  },
+  {
+    term: "Eixo Virgem–Peixes",
+    slug: "eixo-virgem-peixes",
+    shortDefinition:
+      "Eixo zodiacal que representa a polaridade entre análise/serviço prático (Virgem) e intuição/dissolução de fronteiras (Peixes).",
+    description:
+      "O Eixo Virgem–Peixes é um dos seis eixos polares do zodíaco, representando a dinâmica entre análise, discernimento e serviço prático (Virgem) e intuição, compaixão e dissolução de fronteiras (Peixes). Este eixo explora o equilíbrio entre razão e intuição, ordem e caos, serviço específico e compaixão universal. Virgem, regido por Mercúrio, representa o impulso para analisar, aperfeiçoar, organizar e ser útil de maneiras práticas. Peixes, tradicionalmente regido por Júpiter e modernamente por Netuno, representa a busca por conexão espiritual, transcendência de limites e união com o todo. Quando planetas ou pontos importantes (como os Nodos Lunares) se alinham neste eixo, a pessoa frequentemente trabalha com questões de discernimento versus aceitação, crítica versus compaixão, e serviço prático versus entrega espiritual.",
+    relatedTerms: ["virgem", "peixes", "polaridades-zodiacais", "analise", "intuicao", "servico", "eixos-zodiacais"],
+    image: "/placeholder.svg?height=200&width=200&query=virgo pisces axis analysis intuition astrology",
+    category: "eixos-zodiacais",
+  },
+  {
+    term: "Signo de Queda",
+    slug: "signo-de-queda",
+    shortDefinition: "Signo onde um planeta expressa suas qualidades de forma enfraquecida ou desafiadora.",
+    description:
+      "O Signo de Queda é o signo do zodíaco onde um planeta expressa suas qualidades de forma enfraquecida, desafiadora ou menos eficaz. É considerado uma dignidade essencial negativa na astrologia tradicional. Cada planeta tem um signo específico de queda: o Sol em Libra, a Lua em Escorpião, Mercúrio em Peixes, Vênus em Virgem, Marte em Câncer, Júpiter em Capricórnio, Saturno em Áries, Urano em Touro, Netuno em Virgem e Plutão em Libra. Quando um planeta está em seu signo de queda no mapa natal, suas energias encontram dificuldades para se manifestar de maneira harmoniosa, frequentemente exigindo mais esforço consciente para serem expressas positivamente. No entanto, esta posição também pode oferecer profundas lições e crescimento através dos desafios, resultando em uma expressão mais consciente e refinada da energia planetária.",
+    relatedTerms: [
+      "dignidades-essenciais",
+      "domicilio-planetario",
+      "exaltacao",
+      "detrimento",
+      "planetas",
+      "astrologia-tradicional",
+    ],
+    image: "/placeholder.svg?height=200&width=200&query=fall sign astrology planetary weakness challenge",
+    category: "dignidades-planetarias",
+  },
+  {
+    term: "Signo de Exílio",
+    slug: "signo-de-exilio",
+    shortDefinition: "Signo oposto ao domicílio de um planeta, onde sua energia encontra mais resistência.",
+    description:
+      "O Signo de Exílio, também conhecido como Detrimento, é o signo do zodíaco oposto ao domicílio natural de um planeta, onde sua energia encontra mais resistência e dificuldade para se expressar. É considerado uma dignidade essencial negativa na astrologia tradicional. Cada planeta tem um signo específico de exílio (ou dois, no caso de Mercúrio e Vênus): o Sol em Aquário, a Lua em Capricórnio, Mercúrio em Sagitário e Peixes, Vênus em Escorpião e Áries, Marte em Touro e Libra, Júpiter em Gêmeos, Saturno em Câncer, Urano em Leão, Netuno em Virgem e Plutão em Touro. Quando um planeta está em seu signo de exílio no mapa natal, suas qualidades podem se manifestar de forma exagerada, distorcida ou inibida, frequentemente resultando em compensações ou expressões não-convencionais. Esta posição oferece desafios que, quando trabalhados conscientemente, podem levar a um desenvolvimento significativo e uma expressão mais equilibrada da energia planetária.",
+    relatedTerms: [
+      "detrimento",
+      "dignidades-essenciais",
+      "domicilio-planetario",
+      "exaltacao",
+      "queda",
+      "planetas",
+      "astrologia-tradicional",
+    ],
+    image: "/placeholder.svg?height=200&width=200&query=detriment exile sign astrology planetary challenge",
+    category: "dignidades-planetarias",
   },
 ]
