@@ -47,10 +47,7 @@ export default function MapaVedicoResult({ result, isLoading, error, userName = 
           </div>
         ) : processedResult ? (
           <div className="space-y-4 overflow-auto max-h-[70vh] pr-2">
-            <div
-              className="prose prose-lg max-w-none mapa-vedico-content"
-              dangerouslySetInnerHTML={{ __html: processedResult }}
-            />
+            <div className="prose prose-lg max-w-none" dangerouslySetInnerHTML={{ __html: processedResult }} />
           </div>
         ) : (
           <div className="flex flex-col items-center justify-center h-[400px] text-center text-muted-foreground">

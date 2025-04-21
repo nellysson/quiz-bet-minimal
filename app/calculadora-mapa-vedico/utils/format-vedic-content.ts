@@ -7,10 +7,20 @@ export function formatVedicContent(content: string): string {
   // Remover marcações de código Markdown
   let formatted = content.replace(/^```(?:html|markdown)?\s*/i, "").replace(/```\s*$/i, "")
 
+  // Corrigir quebras de linha em palavras com negrito
+  formatted = formatted.replace(/(\w+)\n(\w+)/g, "$1 $2")
+
+  // Garantir que palavras em negrito não sejam quebradas
+  formatted = formatted.replace(/<strong>([^<]+)<\/strong>/g, (match, p1) => {
+    // Remover quebras de linha dentro do texto em negrito
+    const cleanText = p1.replace(/\n/g, " ")
+    return `<strong>${cleanText}</strong>`
+  })
+
   // Converter emojis e títulos em elementos HTML formatados
   formatted = formatted.replace(
     /(📘|🌟|⏫|🪐|🏛️|🧘|🌈|✨)\s+([^\n]+)/g,
-    '<h2 class="text-2xl font-bold mt-6 mb-4 text-amber-800 flex items-center">$1 <span class="ml-2">$2</span></h2>',
+    '<h2 class="text-2xl font-bold mt-8 mb-4 text-amber-800 flex items-center">$1 <span class="ml-2">$2</span></h2>',
   )
 
   // Adicionar classes para parágrafos
@@ -22,7 +32,7 @@ export function formatVedicContent(content: string): string {
   formatted = formatted.replace(/<li>/g, '<li class="mb-2">')
 
   // Adicionar classes para elementos strong e em
-  formatted = formatted.replace(/<strong>/g, '<strong class="font-bold text-amber-700">')
+  formatted = formatted.replace(/<strong>/g, '<strong class="font-bold text-amber-700 whitespace-nowrap">')
   formatted = formatted.replace(/<em>/g, '<em class="italic text-amber-600">')
 
   // Garantir que haja quebras de linha adequadas
@@ -59,9 +69,12 @@ export function formatVedicContent(content: string): string {
 
   // Adicionar espaçamento para subtítulos
   result = result.replace(
-    /<strong class="[^"]*">([^<]+)<\/strong>/g,
-    '<h3 class="text-xl font-semibold mt-5 mb-3 text-amber-700">$1</h3>',
+    /<strong class="[^"]*">([^<]+)<\/strong>:/g,
+    '<h3 class="text-xl font-semibold mt-5 mb-3 text-amber-700">$1:</h3>',
   )
+
+  // Envolver o conteúdo em uma div com estilos
+  result = `<div class="mapa-vedico-content">${result}</div>`
 
   return result
 }

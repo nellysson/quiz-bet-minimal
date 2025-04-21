@@ -39,7 +39,12 @@ País: ${pais}
 
 Gere um Mapa Védico completo, dividido em tópicos, com linguagem clara, espiritual e bem organizada. 
 
-IMPORTANTE: O conteúdo será exibido em um site, então use HTML bem formatado com tags como <h2>, <p>, <strong>, <em>, <ul>, <li>, etc. Mantenha uma estrutura consistente e use espaçamento adequado entre os elementos. NÃO use marcações de código como \`\`\`html ou \`\`\` no início ou fim do seu texto.
+IMPORTANTE: 
+1. O conteúdo será exibido em um site, então use HTML bem formatado com tags como <h2>, <p>, <strong>, <em>, <ul>, <li>, etc. 
+2. Mantenha uma estrutura consistente e use espaçamento adequado entre os elementos. 
+3. NÃO use marcações de código como \`\`\`html ou \`\`\` no início ou fim do seu texto.
+4. NUNCA quebre palavras em negrito (<strong>) em linhas diferentes. Mantenha cada palavra em negrito em uma única linha.
+5. Evite quebras de linha desnecessárias dentro de parágrafos.
 
 Tópicos obrigatórios (use os emojis exatamente como mostrados):
 
@@ -110,7 +115,7 @@ Estimule a busca interior e a expansão espiritual da pessoa`
             {
               role: "system",
               content:
-                "Você é um astrólogo védico tradicional com experiência em astrologia Jyotish. Crie conteúdo rico e detalhado com formatação HTML bem estruturada. Use tags como <h2>, <p>, <strong>, <em>, <ul>, <li>, etc. Mantenha uma estrutura consistente e use espaçamento adequado entre os elementos. NÃO use marcações de código como ```html ou ``` no início ou fim do seu texto. Forneça o conteúdo diretamente como HTML puro.",
+                "Você é um astrólogo védico tradicional com experiência em astrologia Jyotish. Crie conteúdo rico e detalhado com formatação HTML bem estruturada. Use tags como <h2>, <p>, <strong>, <em>, <ul>, <li>, etc. Mantenha uma estrutura consistente e use espaçamento adequado entre os elementos. NUNCA quebre palavras em negrito (<strong>) em linhas diferentes. Mantenha cada palavra em negrito em uma única linha. Evite quebras de linha desnecessárias dentro de parágrafos. NÃO use marcações de código como ```html ou ``` no início ou fim do seu texto. Forneça o conteúdo diretamente como HTML puro.",
             },
             {
               role: "user",
@@ -152,8 +157,9 @@ Estimule a busca interior e a expansão espiritual da pessoa`
       // Remover qualquer marcação de código no final
       result = result.replace(/```\s*$/g, "")
 
-      // Estruturar o conteúdo em seções
-      result = `<div class="mapa-vedico-content">${result}</div>`
+      // Corrigir quebras de linha em palavras com negrito
+      result = result.replace(/(<strong>[^<]+)<\/strong>\n(<strong>[^<]+<\/strong>)/g, "$1</strong> $2")
+      result = result.replace(/(<strong>[^<]+)\n([^<]+<\/strong>)/g, "$1 $2")
 
       return result
     } catch (fetchError) {
