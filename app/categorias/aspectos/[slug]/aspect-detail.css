@@ -1,0 +1,72 @@
+.aspect-symbol {
+  font-size: 3rem;
+  line-height: 1;
+  display: inline-block;
+  margin-right: 0.5rem;
+}
+
+.aspect-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 2rem;
+}
+
+.aspect-meta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+  margin-bottom: 2rem;
+}
+
+.aspect-meta-item {
+  background-color: var(--muted);
+  padding: 0.5rem 1rem;
+  border-radius: 0.5rem;
+  font-size: 0.875rem;
+}
+
+.aspect-keywords {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin: 1.5rem 0;
+}
+
+.aspect-keyword {
+  background-color: var(--muted);
+  padding: 0.25rem 0.75rem;
+  border-radius: 9999px;
+  font-size: 0.875rem;
+}
+
+.aspect-examples {
+  margin-top: 1.5rem;
+}
+
+.aspect-examples li {
+  margin-bottom: 0.5rem;
+}
+
+.aspect-section {
+  margin-bottom: 2rem;
+}
+
+.aspect-section h2 {
+  font-size: 1.5rem;
+  font-weight: 600;
+  margin-bottom: 1rem;
+  color: var(--primary);
+}
+
+@media (max-width: 640px) {
+  .aspect-header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1rem;
+  }
+
+  .aspect-symbol {
+    font-size: 2.5rem;
+  }
+}
