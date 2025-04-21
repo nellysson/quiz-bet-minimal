@@ -1,0 +1,9 @@
+# https://www.robotstxt.org/robotstxt.html
+User-agent: *
+Allow: /
+
+# Sitemaps
+Sitemap: https://portalastral.com.br/sitemap.xml
+Sitemap: https://portalastral.com.br/artigossitemap.xml
+Sitemap: https://portalastral.com.br/glossariositemap.xml
+Sitemap: https://portalastral.com.br/signossitemap.xml
