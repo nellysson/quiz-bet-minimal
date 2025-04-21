@@ -11,5 +11,11 @@ export default function CalculadoraMapaAstralLayout({
 }: {
   children: React.ReactNode
 }) {
-  return <div className="min-h-screen bg-gradient-to-b from-background via-background/95 to-background">{children}</div>
+  return (
+    <>
+      {/* Adicionar o script do IMA SDK */}
+      <script async src="//imasdk.googleapis.com/js/sdkloader/ima3.js"></script>
+      <div className="min-h-screen bg-gradient-to-b from-background via-background/95 to-background">{children}</div>
+    </>
+  )
 }

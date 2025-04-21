@@ -1,7 +1,11 @@
+"use client"
+
+import { useState } from "react"
 import { Card, CardContent, CardDescription, CardHeader, CardTitle, CardFooter } from "@/components/ui/card"
 import { AlertCircle } from "lucide-react"
 import ExportPDFButton from "./export-pdf-button"
 import ZodiacLoadingAnimation from "./zodiac-loading-animation"
+import VideoPaywall from "./video-paywall"
 
 interface MapaAstralResultProps {
   result: string | null
@@ -11,6 +15,13 @@ interface MapaAstralResultProps {
 }
 
 export default function MapaAstralResult({ result, isLoading, error, userName = "" }: MapaAstralResultProps) {
+  const [showPaywall, setShowPaywall] = useState(true)
+
+  // Função para lidar com a conclusão do paywall
+  const handlePaywallComplete = () => {
+    setShowPaywall(false)
+  }
+
   return (
     <Card className="h-full">
       <CardHeader>
@@ -29,12 +40,16 @@ export default function MapaAstralResult({ result, isLoading, error, userName = 
             <p className="text-sm mt-2">{error}</p>
           </div>
         ) : result ? (
-          <div className="space-y-4 overflow-auto max-h-[70vh] pr-2">
-            <div
-              className="prose prose-sm dark:prose-invert max-w-none mapa-astral-content"
-              dangerouslySetInnerHTML={{ __html: result }}
-            />
-          </div>
+          showPaywall ? (
+            <VideoPaywall onComplete={handlePaywallComplete} />
+          ) : (
+            <div className="space-y-4 overflow-auto max-h-[70vh] pr-2">
+              <div
+                className="prose prose-sm dark:prose-invert max-w-none mapa-astral-content"
+                dangerouslySetInnerHTML={{ __html: result }}
+              />
+            </div>
+          )
         ) : (
           <div className="flex flex-col items-center justify-center h-[400px] text-center text-muted-foreground">
             <div className="text-6xl mb-4">✨</div>
@@ -45,7 +60,7 @@ export default function MapaAstralResult({ result, isLoading, error, userName = 
           </div>
         )}
       </CardContent>
-      {result && (
+      {result && !showPaywall && (
         <CardFooter className="flex justify-end">
           <ExportPDFButton content={result} userName={userName} />
         </CardFooter>
