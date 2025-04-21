@@ -34,6 +34,8 @@ export default function RootLayout({
         <meta httpEquiv="Expires" content="0" />
         {/* Adicione uma meta tag com o BUILD_ID para forçar atualização */}
         <meta name="build-id" content={BUILD_ID} />
+        {/* Metatag de verificação do Google */}
+        <meta name="google-site-verification" content="yciWMe2n3Y8hYhV1i8XmdKXnGbuQ5h4zAY6jHBbIIZw" />
 
         {/* Adicionar o link para o favicon no head */}
         <link
