@@ -56,6 +56,11 @@ const nextConfig = {
         permanent: true,
       },
       {
+        source: "/planetassitemap.xml",
+        destination: "/api/planetassitemap",
+        permanent: true,
+      },
+      {
         source: "/sitemap.xml",
         destination: "/api/sitemap",
         permanent: true,
