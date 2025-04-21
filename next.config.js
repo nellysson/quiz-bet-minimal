@@ -46,6 +46,16 @@ const nextConfig = {
         permanent: true,
       },
       {
+        source: "/glossariositemap.xml",
+        destination: "/api/glossariositemap",
+        permanent: true,
+      },
+      {
+        source: "/signossitemap.xml",
+        destination: "/api/signossitemap",
+        permanent: true,
+      },
+      {
         source: "/sitemap.xml",
         destination: "/api/sitemap",
         permanent: true,
