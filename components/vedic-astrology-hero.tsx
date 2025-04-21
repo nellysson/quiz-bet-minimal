@@ -24,8 +24,13 @@ export function VedicAstrologyHero() {
           <Button size="lg" asChild className="bg-amber-500 hover:bg-amber-600 text-white border-0">
             <Link href="#topicos">Explorar Tópicos</Link>
           </Button>
-          <Button size="lg" variant="outline" asChild className="border-white text-white hover:bg-white/20">
-            <Link href="/calculadora-mapa-astral">Calcular Mapa Védico</Link>
+          <Button
+            size="lg"
+            variant="outline"
+            asChild
+            className="border-white text-white hover:bg-white/20 bg-amber-500 hover:bg-amber-600"
+          >
+            <Link href="/calculadora-mapa-vedico">Calcular Mapa Védico</Link>
           </Button>
         </div>
       </div>
