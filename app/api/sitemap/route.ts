@@ -39,6 +39,10 @@ export async function GET() {
   <loc>https://portalastral.com.br/mapaastralssitemap.xml</loc>
   <lastmod>${currentDate}</lastmod>
 </sitemap>
+<sitemap>
+  <loc>https://portalastral.com.br/vedicasitemap.xml</loc>
+  <lastmod>${currentDate}</lastmod>
+</sitemap>
 </sitemapindex>`
 
   // Retornar o XML com o tipo de conteúdo apropriado

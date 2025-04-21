@@ -4,6 +4,7 @@ import { zodiacSigns } from "@/data/zodiac-signs"
 import { articlesData } from "@/data/articles-data"
 import { houses } from "@/data/houses"
 import { planets } from "@/data/planets"
+import { astrologiaVedicaTopics } from "@/data/astrologia-vedica-topics"
 
 const baseUrl = "https://portalastral.com.br"
 
@@ -47,6 +48,12 @@ export default function sitemap(): MetadataRoute.Sitemap {
     },
     {
       url: `${baseUrl}/categorias/mapa-natal`,
+      lastModified: new Date(),
+      changeFrequency: "monthly" as const,
+      priority: 0.8,
+    },
+    {
+      url: `${baseUrl}/categorias/astrologia-vedica`,
       lastModified: new Date(),
       changeFrequency: "monthly" as const,
       priority: 0.8,
@@ -117,5 +124,21 @@ export default function sitemap(): MetadataRoute.Sitemap {
     priority: 0.7,
   }))
 
-  return [...routes, ...glossaryRoutes, ...signRoutes, ...planetRoutes, ...houseRoutes, ...articleRoutes]
+  // Adicionar tópicos de astrologia védica
+  const vedicRoutes = astrologiaVedicaTopics.map((topic) => ({
+    url: `${baseUrl}/categorias/astrologia-vedica/${topic.slug}`,
+    lastModified: new Date(),
+    changeFrequency: "monthly" as const,
+    priority: 0.7,
+  }))
+
+  return [
+    ...routes,
+    ...glossaryRoutes,
+    ...signRoutes,
+    ...planetRoutes,
+    ...houseRoutes,
+    ...articleRoutes,
+    ...vedicRoutes,
+  ]
 }
