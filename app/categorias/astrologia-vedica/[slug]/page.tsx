@@ -110,15 +110,6 @@ export default function AstrologiaVedicaPage({ params }: AstrologiaVedicaPagePro
             )}
           </div>
         </div>
-        <div className="mt-8 text-center">
-          <div>
-            Descubra mais sobre seu mapa védico pessoal.
-            <Button asChild>
-              <Link href="/calculadora-mapa-vedico">Gere seu Mapa Védico</Link>
-            </Button>
-            e aprofunde seu autoconhecimento.
-          </div>
-        </div>
       </article>
     </div>
   )
