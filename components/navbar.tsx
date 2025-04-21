@@ -24,6 +24,7 @@ export default function Navbar() {
     { href: "/horoscopo", label: "Horóscopo" },
     { href: "/calculadora", label: "Calculadora" },
     { href: "/calculadora-mapa-vedico", label: "Mapa Védico" },
+    { href: "/calculadora-mapa-vedico-alt", label: "Mapa Védico Alt" },
     { href: "/faq", label: "FAQ" },
   ]
 
