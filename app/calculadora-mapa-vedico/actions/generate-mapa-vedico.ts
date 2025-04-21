@@ -37,11 +37,11 @@ Cidade de nascimento: ${cidade}
 
 País: ${pais}
 
-Gere um Mapa Védico completo, dividido em tópicos, com linguagem clara, espiritual e bem organizada. O conteúdo será exibido em um site, então use uma estrutura limpa com subtítulos e emojis. Não utilize termos técnicos sem explicação. O foco é no autoconhecimento e na espiritualidade, e não em previsões.
+Gere um Mapa Védico completo, dividido em tópicos, com linguagem clara, espiritual e bem organizada. 
 
-IMPORTANTE: NÃO use marcações de código como \`\`\`html ou \`\`\` no início ou fim do seu texto. Forneça o conteúdo diretamente sem essas marcações.
+IMPORTANTE: O conteúdo será exibido em um site, então use HTML bem formatado com tags como <h2>, <p>, <strong>, <em>, <ul>, <li>, etc. Mantenha uma estrutura consistente e use espaçamento adequado entre os elementos. NÃO use marcações de código como \`\`\`html ou \`\`\` no início ou fim do seu texto.
 
-Tópicos obrigatórios:
+Tópicos obrigatórios (use os emojis exatamente como mostrados):
 
 📘 Introdução ao Mapa Védico
 Explique brevemente o que é a astrologia védica e como ela se diferencia da astrologia ocidental. Fale do uso do zodíaco sideral e da importância do ascendente (Lagna) e das nakshatras.
@@ -110,7 +110,7 @@ Estimule a busca interior e a expansão espiritual da pessoa`
             {
               role: "system",
               content:
-                "Você é um astrólogo védico tradicional com experiência em astrologia Jyotish. Crie conteúdo rico e detalhado com formatação HTML simples, garantindo bom espaçamento entre parágrafos e seções. Use tags como <h1>, <h2>, <p>, <strong>, etc. NÃO use marcações de código como ```html ou ``` no início ou fim do seu texto. Forneça o conteúdo diretamente sem essas marcações.",
+                "Você é um astrólogo védico tradicional com experiência em astrologia Jyotish. Crie conteúdo rico e detalhado com formatação HTML bem estruturada. Use tags como <h2>, <p>, <strong>, <em>, <ul>, <li>, etc. Mantenha uma estrutura consistente e use espaçamento adequado entre os elementos. NÃO use marcações de código como ```html ou ``` no início ou fim do seu texto. Forneça o conteúdo diretamente como HTML puro.",
             },
             {
               role: "user",
@@ -151,6 +151,9 @@ Estimule a busca interior e a expansão espiritual da pessoa`
 
       // Remover qualquer marcação de código no final
       result = result.replace(/```\s*$/g, "")
+
+      // Estruturar o conteúdo em seções
+      result = `<div class="mapa-vedico-content">${result}</div>`
 
       return result
     } catch (fetchError) {

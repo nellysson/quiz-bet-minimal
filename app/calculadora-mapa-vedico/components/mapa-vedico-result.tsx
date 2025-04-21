@@ -5,6 +5,7 @@ import { AlertCircle } from "lucide-react"
 import ExportPDFButton from "./export-pdf-button"
 import VedicLoadingAnimation from "./vedic-loading-animation"
 import { useEffect, useState } from "react"
+import { formatVedicContent } from "../utils/format-vedic-content"
 
 interface MapaVedicoResultProps {
   result: string | null
@@ -18,26 +19,9 @@ export default function MapaVedicoResult({ result, isLoading, error, userName = 
 
   useEffect(() => {
     if (result) {
-      // Processar o resultado para remover marcações de código
-      let processed = result
-
-      // Remover marcações de código Markdown
-      processed = processed.replace(/^```html\s*/i, "").replace(/```\s*$/i, "")
-
-      // Verificar se ainda há marcações de código e removê-las
-      if (processed.startsWith("```")) {
-        const endIndex = processed.indexOf("```", 3)
-        if (endIndex !== -1) {
-          processed = processed.substring(endIndex + 3)
-        } else {
-          processed = processed.substring(3)
-        }
-      }
-
-      // Remover qualquer marcação de código no final
-      processed = processed.replace(/```\s*$/g, "")
-
-      setProcessedResult(processed)
+      // Processar o resultado para formatar corretamente
+      const formatted = formatVedicContent(result)
+      setProcessedResult(formatted)
     } else {
       setProcessedResult(null)
     }
@@ -64,7 +48,7 @@ export default function MapaVedicoResult({ result, isLoading, error, userName = 
         ) : processedResult ? (
           <div className="space-y-4 overflow-auto max-h-[70vh] pr-2">
             <div
-              className="prose prose-sm dark:prose-invert max-w-none mapa-vedico-content"
+              className="prose prose-lg max-w-none mapa-vedico-content"
               dangerouslySetInnerHTML={{ __html: processedResult }}
             />
           </div>
