@@ -1,0 +1,95 @@
+/* Estilos para o mapa védico */
+.mapa-vedico-content {
+  font-family: "Georgia", serif;
+  line-height: 1.6;
+  color: #333;
+}
+
+.mapa-vedico-content h1,
+.mapa-vedico-content h2,
+.mapa-vedico-content h3 {
+  margin-top: 1.5em;
+  margin-bottom: 0.75em;
+  font-weight: 600;
+  color: #8b5a00;
+}
+
+.mapa-vedico-content h1 {
+  font-size: 1.75rem;
+  border-bottom: 2px solid #f0e6d2;
+  padding-bottom: 0.5rem;
+}
+
+.mapa-vedico-content h2 {
+  font-size: 1.5rem;
+  border-bottom: 1px solid #f0e6d2;
+  padding-bottom: 0.3rem;
+}
+
+.mapa-vedico-content h3 {
+  font-size: 1.25rem;
+}
+
+.mapa-vedico-content p {
+  margin-bottom: 1.2em;
+  text-align: justify;
+}
+
+.mapa-vedico-content ul,
+.mapa-vedico-content ol {
+  margin-bottom: 1.2em;
+  padding-left: 1.5em;
+}
+
+.mapa-vedico-content li {
+  margin-bottom: 0.5em;
+}
+
+.mapa-vedico-content strong {
+  color: #8b5a00;
+  font-weight: 600;
+}
+
+.mapa-vedico-content em {
+  font-style: italic;
+}
+
+.mapa-vedico-content blockquote {
+  margin: 1.5em 0;
+  padding: 1em 1.5em;
+  border-left: 4px solid #f0e6d2;
+  background-color: #fffaf0;
+  font-style: italic;
+}
+
+.mapa-vedico-content hr {
+  margin: 2em 0;
+  border: 0;
+  height: 1px;
+  background: #f0e6d2;
+}
+
+/* Estilos para os emojis */
+.mapa-vedico-content .emoji {
+  font-size: 1.5em;
+  margin-right: 0.5em;
+  vertical-align: middle;
+}
+
+/* Estilos para seções específicas */
+.mapa-vedico-content .section-intro,
+.mapa-vedico-content .section-nakshatra,
+.mapa-vedico-content .section-lagna,
+.mapa-vedico-content .section-planets,
+.mapa-vedico-content .section-houses,
+.mapa-vedico-content .section-karma,
+.mapa-vedico-content .section-recommendations,
+.mapa-vedico-content .section-final {
+  margin-bottom: 2.5em;
+  padding-bottom: 1.5em;
+  border-bottom: 1px dashed #f0e6d2;
+}
+
+.mapa-vedico-content .section-final {
+  border-bottom: none;
+}
