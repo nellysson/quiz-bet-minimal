@@ -9,3 +9,6 @@ Sitemap: https://portalastral.com.br/glossariositemap.xml
 Sitemap: https://portalastral.com.br/signossitemap.xml
 Sitemap: https://portalastral.com.br/planetassitemap.xml
 Sitemap: https://portalastral.com.br/horoscopositemap.xml
+Sitemap: https://portalastral.com.br/casassitemap.xml
+Sitemap: https://portalastral.com.br/aspectossitemap.xml
+Sitemap: https://portalastral.com.br/mapaastralssitemap.xml

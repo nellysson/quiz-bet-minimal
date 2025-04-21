@@ -66,6 +66,21 @@ const nextConfig = {
         permanent: true,
       },
       {
+        source: "/casassitemap.xml",
+        destination: "/api/casassitemap",
+        permanent: true,
+      },
+      {
+        source: "/aspectossitemap.xml",
+        destination: "/api/aspectossitemap",
+        permanent: true,
+      },
+      {
+        source: "/mapaastralssitemap.xml",
+        destination: "/api/mapaastralssitemap",
+        permanent: true,
+      },
+      {
         source: "/sitemap.xml",
         destination: "/api/sitemap",
         permanent: true,
