@@ -15,7 +15,19 @@ export default function VideoPaywall({ onComplete }: VideoPaywallProps) {
   const [hasStarted, setHasStarted] = useState(false)
   const videoRef = useRef<HTMLVideoElement>(null)
   const adContainerRef = useRef<HTMLDivElement>(null)
+  const containerRef = useRef<HTMLDivElement>(null)
   const timerRef = useRef<NodeJS.Timeout | null>(null)
+
+  // Função para calcular as dimensões do player com base no tamanho do container
+  const getPlayerDimensions = () => {
+    if (!containerRef.current) return { width: 640, height: 360 }
+
+    const containerWidth = containerRef.current.clientWidth
+    // Manter proporção 16:9
+    const height = Math.floor((containerWidth * 9) / 16)
+
+    return { width: containerWidth, height }
+  }
 
   // Inicializar o anúncio quando o componente montar
   useEffect(() => {
@@ -35,11 +47,21 @@ export default function VideoPaywall({ onComplete }: VideoPaywallProps) {
       loadImaScript()
     }
 
+    // Adicionar listener para redimensionamento da janela
+    const handleResize = () => {
+      if (window.google && window.google.ima && adContainerRef.current) {
+        initializeIMA()
+      }
+    }
+
+    window.addEventListener("resize", handleResize)
+
     return () => {
       // Limpar o timer quando o componente desmontar
       if (timerRef.current) {
         clearInterval(timerRef.current)
       }
+      window.removeEventListener("resize", handleResize)
     }
   }, [])
 
@@ -51,6 +73,13 @@ export default function VideoPaywall({ onComplete }: VideoPaywallProps) {
     }
 
     try {
+      // Limpar o conteúdo anterior
+      while (adContainerRef.current.firstChild) {
+        adContainerRef.current.removeChild(adContainerRef.current.firstChild)
+      }
+
+      const dimensions = getPlayerDimensions()
+
       const adDisplayContainer = new window.google.ima.AdDisplayContainer(adContainerRef.current, videoRef.current)
       adDisplayContainer.initialize()
 
@@ -79,7 +108,7 @@ export default function VideoPaywall({ onComplete }: VideoPaywallProps) {
 
         // Iniciar os anúncios
         try {
-          adsManager.init(640, 360, window.google.ima.ViewMode.NORMAL)
+          adsManager.init(dimensions.width, dimensions.height, window.google.ima.ViewMode.NORMAL)
           adsManager.start()
         } catch (adError) {
           console.error("Erro ao iniciar anúncios:", adError)
@@ -95,11 +124,13 @@ export default function VideoPaywall({ onComplete }: VideoPaywallProps) {
       // Configurar a solicitação de anúncio
       const adsRequest = new window.google.ima.AdsRequest()
       adsRequest.adTagUrl =
-        "https://googleads.g.doubleclick.net/pagead/ads?ad_type=standardvideo_text_image&client=ca-video-pub-6503684672960142&description_url=http%3A%2F%2FV%C3%ADdeo+sobre+assuntos+cotidianos&videoad_start_delay=0&max_ad_duration=30000"
-      adsRequest.linearAdSlotWidth = 640
-      adsRequest.linearAdSlotHeight = 360
-      adsRequest.nonLinearAdSlotWidth = 640
-      adsRequest.nonLinearAdSlotHeight = 150
+        "https://googleads.g.doubleclick.net/pagead/ads?ad_type=standardvideo&client=ca-video-pub-6503684672960142&description_url=http%3A%2F%2FV%C3%ADdeo+sobre+assuntos+cotidianos&videoad_start_delay=0&max_ad_duration=30000"
+
+      // Definir as dimensões com base no tamanho atual do container
+      adsRequest.linearAdSlotWidth = dimensions.width
+      adsRequest.linearAdSlotHeight = dimensions.height
+      adsRequest.nonLinearAdSlotWidth = dimensions.width
+      adsRequest.nonLinearAdSlotHeight = Math.floor(dimensions.height / 3)
 
       // Solicitar anúncios
       adsLoader.requestAds(adsRequest)
@@ -153,17 +184,17 @@ export default function VideoPaywall({ onComplete }: VideoPaywallProps) {
   return (
     <Card className="w-full">
       <CardHeader>
-        <CardTitle className="text-center">Assista ao vídeo para ver seu mapa astral</CardTitle>
+        <CardTitle className="text-center text-xl md:text-2xl">Assista ao vídeo para ver seu mapa astral</CardTitle>
       </CardHeader>
-      <CardContent className="flex flex-col items-center">
-        <div className="relative w-full max-w-2xl mx-auto">
+      <CardContent className="flex flex-col items-center px-2 sm:px-4 md:px-6">
+        <div ref={containerRef} className="relative w-full max-w-3xl mx-auto">
           {/* Container para anúncios */}
           <div ref={adContainerRef} className="absolute inset-0 z-10"></div>
 
           {/* Vídeo principal */}
           <video
             ref={videoRef}
-            className="w-full h-auto"
+            className="w-full h-auto aspect-video"
             src="https://media.canva.com/v2/files/uri:ifs%3A%2F%2FV%2F40uPmaCfkyZ-IsFUcFCh56eNDev-fkAUz12th9RLZPg.mp4?csig=AAAAAAAAAAAAAAAAAAAAALPX0JvuJW4SeVxN50ZjcH96oCdhaOleY8WC0DaHWVhz&exp=1745280120&signer=video-rpc&token=AAIAAVYALzQwdVBtYUNma3laLUlzRlVjRkNoNTZlTkRldi1ma0FVejEydGg5UkxaUGcubXA0AAAAAAGWWs00wL34c6CuJVXf9LuL6LB9cdmZVv1PnRYjlWq9B-p_RNC-"
             controls={false}
             playsInline
@@ -180,20 +211,20 @@ export default function VideoPaywall({ onComplete }: VideoPaywallProps) {
               Iniciar Vídeo
             </Button>
           )}
+        </div>
 
-          {/* Contador */}
-          <div className="mt-4 flex items-center justify-center gap-2 text-lg font-medium">
-            <Clock className="h-5 w-5" />
-            <span>
-              {timeRemaining > 0
-                ? `Aguarde ${timeRemaining} segundos para acessar seu mapa astral`
-                : "Você já pode acessar seu mapa astral!"}
-            </span>
-          </div>
+        {/* Contador */}
+        <div className="mt-6 flex items-center justify-center gap-2 text-base md:text-lg font-medium">
+          <Clock className="h-5 w-5" />
+          <span>
+            {timeRemaining > 0
+              ? `Aguarde ${timeRemaining} segundos para acessar seu mapa astral`
+              : "Você já pode acessar seu mapa astral!"}
+          </span>
         </div>
       </CardContent>
-      <CardFooter className="flex justify-center">
-        <Button onClick={onComplete} disabled={timeRemaining > 0} size="lg" className="mt-4">
+      <CardFooter className="flex justify-center px-4 pb-6">
+        <Button onClick={onComplete} disabled={timeRemaining > 0} size="lg" className="mt-2 w-full sm:w-auto">
           {timeRemaining > 0 ? `Aguarde ${timeRemaining}s` : "Ver meu mapa astral"}
         </Button>
       </CardFooter>
