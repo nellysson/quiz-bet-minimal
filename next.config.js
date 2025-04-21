@@ -61,6 +61,11 @@ const nextConfig = {
         permanent: true,
       },
       {
+        source: "/horoscopositemap.xml",
+        destination: "/api/horoscopositemap",
+        permanent: true,
+      },
+      {
         source: "/sitemap.xml",
         destination: "/api/sitemap",
         permanent: true,

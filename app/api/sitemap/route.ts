@@ -23,6 +23,10 @@ export async function GET() {
    <loc>https://portalastral.com.br/planetassitemap.xml</loc>
    <lastmod>${currentDate}</lastmod>
  </sitemap>
+ <sitemap>
+   <loc>https://portalastral.com.br/horoscopositemap.xml</loc>
+   <lastmod>${currentDate}</lastmod>
+ </sitemap>
 </sitemapindex>`
 
   // Retornar o XML com o tipo de conteúdo apropriado
