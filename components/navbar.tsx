@@ -23,6 +23,7 @@ export default function Navbar() {
     { href: "/artigos", label: "Artigos" },
     { href: "/horoscopo", label: "Horóscopo" },
     { href: "/calculadora", label: "Calculadora" },
+    { href: "/calculadora-mapa-vedico", label: "Mapa Védico" },
     { href: "/faq", label: "FAQ" },
   ]
 
