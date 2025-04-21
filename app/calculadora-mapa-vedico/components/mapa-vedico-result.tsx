@@ -1,7 +1,10 @@
+"use client"
+
 import { Card, CardContent, CardDescription, CardHeader, CardTitle, CardFooter } from "@/components/ui/card"
 import { AlertCircle } from "lucide-react"
 import ExportPDFButton from "./export-pdf-button"
 import VedicLoadingAnimation from "./vedic-loading-animation"
+import { useEffect, useState } from "react"
 
 interface MapaVedicoResultProps {
   result: string | null
@@ -11,6 +14,35 @@ interface MapaVedicoResultProps {
 }
 
 export default function MapaVedicoResult({ result, isLoading, error, userName = "" }: MapaVedicoResultProps) {
+  const [processedResult, setProcessedResult] = useState<string | null>(null)
+
+  useEffect(() => {
+    if (result) {
+      // Processar o resultado para remover marcações de código
+      let processed = result
+
+      // Remover marcações de código Markdown
+      processed = processed.replace(/^```html\s*/i, "").replace(/```\s*$/i, "")
+
+      // Verificar se ainda há marcações de código e removê-las
+      if (processed.startsWith("```")) {
+        const endIndex = processed.indexOf("```", 3)
+        if (endIndex !== -1) {
+          processed = processed.substring(endIndex + 3)
+        } else {
+          processed = processed.substring(3)
+        }
+      }
+
+      // Remover qualquer marcação de código no final
+      processed = processed.replace(/```\s*$/g, "")
+
+      setProcessedResult(processed)
+    } else {
+      setProcessedResult(null)
+    }
+  }, [result])
+
   return (
     <Card className="h-full">
       <CardHeader>
@@ -29,11 +61,11 @@ export default function MapaVedicoResult({ result, isLoading, error, userName = 
             <p className="text-lg font-medium">Erro ao gerar o mapa védico</p>
             <p className="text-sm mt-2">{error}</p>
           </div>
-        ) : result ? (
+        ) : processedResult ? (
           <div className="space-y-4 overflow-auto max-h-[70vh] pr-2">
             <div
               className="prose prose-sm dark:prose-invert max-w-none mapa-vedico-content"
-              dangerouslySetInnerHTML={{ __html: result }}
+              dangerouslySetInnerHTML={{ __html: processedResult }}
             />
           </div>
         ) : (
@@ -46,9 +78,9 @@ export default function MapaVedicoResult({ result, isLoading, error, userName = 
           </div>
         )}
       </CardContent>
-      {result && (
+      {processedResult && (
         <CardFooter className="flex justify-end">
-          <ExportPDFButton content={result} userName={userName} />
+          <ExportPDFButton content={processedResult} userName={userName} />
         </CardFooter>
       )}
     </Card>

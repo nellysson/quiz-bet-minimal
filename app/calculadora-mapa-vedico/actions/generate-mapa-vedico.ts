@@ -39,6 +39,8 @@ País: ${pais}
 
 Gere um Mapa Védico completo, dividido em tópicos, com linguagem clara, espiritual e bem organizada. O conteúdo será exibido em um site, então use uma estrutura limpa com subtítulos e emojis. Não utilize termos técnicos sem explicação. O foco é no autoconhecimento e na espiritualidade, e não em previsões.
 
+IMPORTANTE: NÃO use marcações de código como \`\`\`html ou \`\`\` no início ou fim do seu texto. Forneça o conteúdo diretamente sem essas marcações.
+
 Tópicos obrigatórios:
 
 📘 Introdução ao Mapa Védico
@@ -108,7 +110,7 @@ Estimule a busca interior e a expansão espiritual da pessoa`
             {
               role: "system",
               content:
-                "Você é um astrólogo védico tradicional com experiência em astrologia Jyotish. Crie conteúdo rico e detalhado com formatação HTML simples, garantindo bom espaçamento entre parágrafos e seções. Use tags como <h1>, <h2>, <p>, <strong>, etc.",
+                "Você é um astrólogo védico tradicional com experiência em astrologia Jyotish. Crie conteúdo rico e detalhado com formatação HTML simples, garantindo bom espaçamento entre parágrafos e seções. Use tags como <h1>, <h2>, <p>, <strong>, etc. NÃO use marcações de código como ```html ou ``` no início ou fim do seu texto. Forneça o conteúdo diretamente sem essas marcações.",
             },
             {
               role: "user",
@@ -131,8 +133,24 @@ Estimule a busca interior e a expansão espiritual da pessoa`
       const data = await response.json()
       console.log("Resposta recebida com sucesso")
 
-      const result = data.choices[0].message.content
+      let result = data.choices[0].message.content
       console.log("Conteúdo bruto recebido:", result.substring(0, 100) + "...")
+
+      // Remover marcações de código Markdown
+      result = result.replace(/^```html\s*/i, "").replace(/```\s*$/i, "")
+
+      // Verificar se ainda há marcações de código e removê-las
+      if (result.startsWith("```")) {
+        const endIndex = result.indexOf("```", 3)
+        if (endIndex !== -1) {
+          result = result.substring(endIndex + 3)
+        } else {
+          result = result.substring(3)
+        }
+      }
+
+      // Remover qualquer marcação de código no final
+      result = result.replace(/```\s*$/g, "")
 
       return result
     } catch (fetchError) {

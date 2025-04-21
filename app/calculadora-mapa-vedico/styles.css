@@ -1,0 +1,45 @@
+.mapa-vedico-content {
+  line-height: 1.6;
+  font-size: 1rem;
+}
+
+.mapa-vedico-content h1,
+.mapa-vedico-content h2,
+.mapa-vedico-content h3 {
+  margin-top: 1.5em;
+  margin-bottom: 0.75em;
+  color: #805ad5;
+}
+
+.mapa-vedico-content p {
+  margin-bottom: 1em;
+}
+
+.mapa-vedico-content ul,
+.mapa-vedico-content ol {
+  margin-left: 1.5em;
+  margin-bottom: 1em;
+}
+
+.mapa-vedico-content li {
+  margin-bottom: 0.5em;
+}
+
+.mapa-vedico-content strong {
+  color: #6b46c1;
+  font-weight: 600;
+}
+
+.mapa-vedico-content em {
+  font-style: italic;
+  color: #553c9a;
+}
+
+.mapa-vedico-content blockquote {
+  border-left: 4px solid #d6bcfa;
+  padding-left: 1em;
+  margin-left: 0;
+  margin-right: 0;
+  font-style: italic;
+  color: #6b46c1;
+}
