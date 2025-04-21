@@ -10,19 +10,19 @@ export async function GET() {
 
   // Adicionar referência ao sitemap de artigos
   xml += "  <sitemap>\n"
-  xml += "    <loc>https://astro-glossario.vercel.app/artigossitemap.xml</loc>\n"
+  xml += "    <loc>https://portalastral.com.br/artigossitemap.xml</loc>\n"
   xml += `    <lastmod>${currentDate}</lastmod>\n`
   xml += "  </sitemap>\n"
 
   // Adicionar referência ao sitemap de glossário (a ser criado)
   xml += "  <sitemap>\n"
-  xml += "    <loc>https://astro-glossario.vercel.app/glossariositemapxml</loc>\n"
+  xml += "    <loc>https://portalastral.com.br/glossariositemap.xml</loc>\n"
   xml += `    <lastmod>${currentDate}</lastmod>\n`
   xml += "  </sitemap>\n"
 
   // Adicionar referência ao sitemap de signos (a ser criado)
   xml += "  <sitemap>\n"
-  xml += "    <loc>https://astro-glossario.vercel.app/signossitemap.xml</loc>\n"
+  xml += "    <loc>https://portalastral.com.br/signossitemap.xml</loc>\n"
   xml += `    <lastmod>${currentDate}</lastmod>\n`
   xml += "  </sitemap>\n"
 

@@ -1,10 +1,11 @@
 import type { MetadataRoute } from "next"
 import { glossaryTerms } from "@/data/glossary-terms"
 import { zodiacSigns } from "@/data/zodiac-signs"
-// Adicionar o import para os artigos
 import { articlesData } from "@/data/articles-data"
+import { houses } from "@/data/houses"
+import { planets } from "@/data/planets"
 
-const baseUrl = "https://astro-glossario.vercel.app"
+const baseUrl = "https://portalastral.com.br"
 
 export default function sitemap(): MetadataRoute.Sitemap {
   const routes = [
@@ -68,7 +69,6 @@ export default function sitemap(): MetadataRoute.Sitemap {
       changeFrequency: "monthly" as const,
       priority: 0.6,
     },
-    // Adicionar a rota para a página de artigos no array routes
     {
       url: `${baseUrl}/artigos`,
       lastModified: new Date(),
@@ -93,6 +93,22 @@ export default function sitemap(): MetadataRoute.Sitemap {
     priority: 0.8,
   }))
 
+  // Adicionar planetas
+  const planetRoutes = planets.map((planet) => ({
+    url: `${baseUrl}/categorias/planetas/${planet.slug}`,
+    lastModified: new Date(),
+    changeFrequency: "monthly" as const,
+    priority: 0.7,
+  }))
+
+  // Adicionar casas
+  const houseRoutes = houses.map((house) => ({
+    url: `${baseUrl}/categorias/casas/${house.slug}`,
+    lastModified: new Date(),
+    changeFrequency: "monthly" as const,
+    priority: 0.7,
+  }))
+
   // Adicionar artigos
   const articleRoutes = articlesData.map((article) => ({
     url: `${baseUrl}/artigos/${article.slug}`,
@@ -101,6 +117,5 @@ export default function sitemap(): MetadataRoute.Sitemap {
     priority: 0.7,
   }))
 
-  // Atualizar o return para incluir articleRoutes
-  return [...routes, ...glossaryRoutes, ...signRoutes, ...articleRoutes]
+  return [...routes, ...glossaryRoutes, ...signRoutes, ...planetRoutes, ...houseRoutes, ...articleRoutes]
 }

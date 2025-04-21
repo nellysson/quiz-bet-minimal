@@ -1,4 +1,4 @@
-import { articlesData } from "@/data/articles-data"
+import { glossaryTerms } from "@/data/glossary-terms"
 import { NextResponse } from "next/server"
 
 export async function GET() {
@@ -9,21 +9,21 @@ export async function GET() {
   let xml = '<?xml version="1.0" encoding="UTF-8"?>\n'
   xml += '<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n'
 
-  // Adicionar a página principal de artigos
+  // Adicionar a página principal do glossário
   xml += "  <url>\n"
-  xml += "    <loc>https://portalastral.com.br/artigos</loc>\n"
+  xml += "    <loc>https://portalastral.com.br/glossario</loc>\n"
   xml += `    <lastmod>${currentDate}</lastmod>\n`
   xml += "    <changefreq>weekly</changefreq>\n"
   xml += "    <priority>0.9</priority>\n"
   xml += "  </url>\n"
 
-  // Adicionar cada artigo individual
-  articlesData.forEach((article) => {
+  // Adicionar cada termo do glossário individual
+  glossaryTerms.forEach((term) => {
     xml += "  <url>\n"
-    xml += `    <loc>https://portalastral.com.br/artigos/${article.slug}</loc>\n`
+    xml += `    <loc>https://portalastral.com.br/glossario/${term.slug}</loc>\n`
     xml += `    <lastmod>${currentDate}</lastmod>\n`
     xml += "    <changefreq>monthly</changefreq>\n"
-    xml += "    <priority>0.8</priority>\n"
+    xml += "    <priority>0.7</priority>\n"
     xml += "  </url>\n"
   })
 
