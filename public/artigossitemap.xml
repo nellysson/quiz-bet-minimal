@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  <!-- Artigo: Signos do zodíaco -->
+  <url>
+    <loc>https://astro-glossario.vercel.app/artigos/signos-do-zodiaco-datas-caracteristicas-personalidade</loc>
+    <lastmod>2024-04-21</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  
+  <!-- Artigo: Ascendente -->
+  <url>
+    <loc>https://astro-glossario.vercel.app/artigos/ascendente-o-que-e-e-como-influencia-sua-personalidade</loc>
+    <lastmod>2024-04-21</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  
+  <!-- Artigo: Compatibilidade amorosa -->
+  <url>
+    <loc>https://astro-glossario.vercel.app/artigos/compatibilidade-amorosa-entre-signos</loc>
+    <lastmod>2024-04-21</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  
+  <!-- Artigo: Mapa astral -->
+  <url>
+    <loc>https://astro-glossario.vercel.app/artigos/mapa-astral-completo-como-fazer-interpretar</loc>
+    <lastmod>2024-04-21</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  
+  <!-- Artigo: Mercúrio retrógrado -->
+  <url>
+    <loc>https://astro-glossario.vercel.app/artigos/mercurio-retrogrado-significado-e-como-sobreviver</loc>
+    <lastmod>2024-04-21</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  
+  <!-- Página principal de artigos -->
+  <url>
+    <loc>https://astro-glossario.vercel.app/artigos</loc>
+    <lastmod>2024-04-21</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+</urlset>

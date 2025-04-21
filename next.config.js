@@ -8,7 +8,7 @@ const nextConfig = {
     ignoreBuildErrors: true,
   },
   images: {
-    domains: ["hebbkx1anhila5yf.public.blob.vercel-storage.com"],
+    domains: ["hebbkx1anhila5yf.public.blob.vercel-storage.com", "v0.blob.com"],
     unoptimized: true,
   },
   // Gerando um ID de build único para cada deploy
@@ -34,6 +34,21 @@ const nextConfig = {
             value: "0",
           },
         ],
+      },
+    ]
+  },
+  // Adicionar redirecionamentos para os sitemaps
+  async redirects() {
+    return [
+      {
+        source: "/artigossitemap.xml",
+        destination: "/api/artigossitemap",
+        permanent: true,
+      },
+      {
+        source: "/sitemap.xml",
+        destination: "/api/sitemap",
+        permanent: true,
       },
     ]
   },
