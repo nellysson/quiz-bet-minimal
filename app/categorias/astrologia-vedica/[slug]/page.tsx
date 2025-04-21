@@ -33,6 +33,18 @@ export async function generateStaticParams() {
   }))
 }
 
+// Função auxiliar para criar slugs a partir dos títulos das seções
+function createSlug(text: string): string {
+  return text
+    .toLowerCase()
+    .normalize("NFD")
+    .replace(/[\u0300-\u036f]/g, "")
+    .replace(/[^\w\s-]/g, "")
+    .replace(/\s+/g, "-")
+    .replace(/--+/g, "-")
+    .trim()
+}
+
 export default function AstrologiaVedicaPage({ params }: AstrologiaVedicaPageProps) {
   const topic = astrologiaVedicaTopics.find((t) => t.slug === params.slug)
 
@@ -66,7 +78,11 @@ export default function AstrologiaVedicaPage({ params }: AstrologiaVedicaPagePro
           {topic.fullContent ? (
             <>
               {topic.fullContent.map((section, index) => (
-                <section key={index} className="mb-8">
+                <section
+                  key={index}
+                  id={section.title ? createSlug(section.title) : `section-${index}`}
+                  className="mb-8 scroll-mt-24"
+                >
                   {section.title && <h2 className="text-2xl font-semibold mb-4">{section.title}</h2>}
                   {section.content.map((paragraph, pIndex) => (
                     <p key={pIndex} className="mb-4">
