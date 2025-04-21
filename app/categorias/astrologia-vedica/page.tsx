@@ -3,7 +3,6 @@ import Link from "next/link"
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card"
 import { astrologiaVedicaTopics } from "@/data/astrologia-vedica-topics"
 import { VedicAstrologyHero } from "@/components/vedic-astrology-hero"
-import { VedicAstrologySitemap } from "@/components/vedic-astrology-sitemap"
 
 export const metadata: Metadata = {
   title: "Astrologia Védica | Astrologia",
@@ -58,8 +57,6 @@ export default function AstrologiaVedicaPage() {
           ))}
         </div>
       </div>
-
-      <VedicAstrologySitemap />
     </div>
   )
 }
